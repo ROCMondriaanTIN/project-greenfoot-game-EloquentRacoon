@@ -16,7 +16,7 @@ public class Hero extends Mover {
         gravity = 9.8;
         acc = 0.6;
         drag = 0.8;
-        setImage("p1.png");
+        setImage("p1.1.png");
     }
 
     @Override
@@ -39,22 +39,23 @@ public class Hero extends Mover {
     }
 
     public void handleInput() {
-        if (Greenfoot.isKeyDown("w")) {
-            velocityY = -10;
+        if (Greenfoot.isKeyDown("w")&& velocityY == 0) {
+            velocityY = -15;
         }
 
         if (Greenfoot.isKeyDown("a")) {
             velocityX = -2;
+            
         } else if (Greenfoot.isKeyDown("d")) {
             velocityX = 2;
         }
     }
 
     public int getWidth() {
-        return getImage().getWidth();
+        return (getImage().getWidth() );
     }
 
     public int getHeight() {
-        return getImage().getHeight();
+        return (getImage().getHeight() );
     }
 }

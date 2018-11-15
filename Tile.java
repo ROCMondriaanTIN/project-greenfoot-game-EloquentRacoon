@@ -23,7 +23,7 @@ public class Tile extends Actor {
         setImage(image);
         getImage().scale(width, heigth);
         if (CollisionEngine.DEBUG) {
-            getImage().drawString("ÏD: " + id, 10, 10);
+            getImage().drawString("ÏD: " + id, 5, 5);
         }
         _id = id;
         id++;
