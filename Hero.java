@@ -1,4 +1,4 @@
-
+  
 import greenfoot.*;
 
 /**
@@ -10,6 +10,7 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
+    private String waterTile = ("liquidWater.png");
 
     public Hero() {
         super();
@@ -36,18 +37,42 @@ public class Hero extends Mover {
                 break;
             }
         }
+        for (Actor water : getIntersectingObjects(TileInteraction.class))
+        {
+            if (waterTile != null)
+            {
+                velocityY = 0;
+                
+            }
+        }
     }
-
+    
+    
+    
+    public boolean onGround() {
+        Actor under = getOneObjectAtOffset (0 , getImage().getHeight() / 2 , Tile.class);
+        return under != null;
+    }
+   
+    public boolean ignoreTile() {
+        Actor ignore = getOneObjectAtOffset (0, getImage().getHeight() / 2 , TileInteraction.class);
+        return ignore == null;
+    }
+    
     public void handleInput() {
-        if (Greenfoot.isKeyDown("w")&& velocityY == 0) {
-            velocityY = -15;
+        if (Greenfoot.isKeyDown("w") && onGround() == true) {
+           if (ignoreTile() != true){
+               velocityY = 2;
+            }
+           else{velocityY = -17; }
         }
 
         if (Greenfoot.isKeyDown("a")) {
-            velocityX = -2;
+           
+            velocityX = -4;
             
         } else if (Greenfoot.isKeyDown("d")) {
-            velocityX = 2;
+            velocityX = 4;
         }
     }
 

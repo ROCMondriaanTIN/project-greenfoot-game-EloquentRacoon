@@ -35,6 +35,7 @@ public class CollisionEngine {
      */
     public void addCollidingMover(Mover mover) {
         this.collidingActors.add(mover);
+        
     }
 
     /**

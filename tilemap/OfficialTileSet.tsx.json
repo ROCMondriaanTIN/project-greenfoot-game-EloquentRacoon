@@ -6,9 +6,9 @@
      "width":1
     },
  "margin":0,
- "name":"mijn tiles",
+ "name":"OfficialTileSet",
  "spacing":0,
- "tilecount":184,
+ "tilecount":264,
  "tiledversion":"1.2.0",
  "tileheight":146,
  "tiles":[
@@ -361,8 +361,20 @@
          "imagewidth":70
         }, 
         {
+         "id":58,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/door_closedMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
          "id":59,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/door_closedTop.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":60,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/door_openMid.png",
          "imageheight":70,
          "imagewidth":70
         }, 
@@ -537,6 +549,42 @@
         {
          "id":89,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/ladder_top.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":90,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/liquidLava.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":91,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/liquidLavaTop.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":92,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/liquidLavaTop_mid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":93,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/liquidWater.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":94,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/liquidWaterTop.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":95,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Tiles\/liquidWaterTop_mid.png",
          "imageheight":70,
          "imagewidth":70
         }, 
@@ -998,125 +1046,557 @@
         }, 
         {
          "id":172,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/bomb.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":173,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/bombFlash.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":174,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/bush.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":175,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":176,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonBlue_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":177,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":178,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonGreen_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":179,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":180,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonRed_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":181,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":182,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/buttonYellow_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":183,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/cactus.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":184,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/chain.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":185,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/cloud1.png",
+         "imageheight":71,
+         "imagewidth":128
+        }, 
+        {
+         "id":186,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/cloud2.png",
+         "imageheight":71,
+         "imagewidth":129
+        }, 
+        {
+         "id":187,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/cloud3.png",
+         "imageheight":71,
+         "imagewidth":129
+        }, 
+        {
+         "id":188,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/coinBronze.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":189,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/coinGold.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":190,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/coinSilver.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":191,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/fireball.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":192,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":193,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagBlue2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":194,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagBlueHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":195,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":196,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagGreen2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":197,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagGreenHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":198,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":199,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagRed2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":200,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagRedHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":201,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":202,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagYellow2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":203,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/flagYellowHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":204,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/gemBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":205,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/gemGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":206,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/gemRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":207,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/gemYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":208,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/keyBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":209,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/keyGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":210,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/keyRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":211,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/keyYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":212,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/mushroomBrown.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":213,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/mushroomRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":214,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/particleBrick1a.png",
+         "imageheight":14,
+         "imagewidth":19
+        }, 
+        {
+         "id":215,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/particleBrick1b.png",
+         "imageheight":21,
+         "imagewidth":21
+        }, 
+        {
+         "id":216,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/particleBrick2a.png",
+         "imageheight":14,
+         "imagewidth":19
+        }, 
+        {
+         "id":217,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/particleBrick2b.png",
+         "imageheight":21,
+         "imagewidth":21
+        }, 
+        {
+         "id":218,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/plant.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":219,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/plantPurple.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":220,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/rock.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":221,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/snowhill.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":222,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/spikes.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":223,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/springboardDown.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":224,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/springboardUp.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":225,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/star.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":226,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/switchLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":227,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/switchMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":228,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/switchRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":229,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/weight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":230,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/Items\/weightChained.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":231,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_0.png",
          "imageheight":38,
          "imagewidth":30
         }, 
         {
-         "id":173,
+         "id":232,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_1.png",
          "imageheight":37,
          "imagewidth":26
         }, 
         {
-         "id":174,
+         "id":233,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_2.png",
          "imageheight":38,
          "imagewidth":32
         }, 
         {
-         "id":175,
+         "id":234,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_3.png",
          "imageheight":38,
          "imagewidth":28
         }, 
         {
-         "id":176,
+         "id":235,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_4.png",
          "imageheight":38,
          "imagewidth":29
         }, 
         {
-         "id":177,
+         "id":236,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_5.png",
          "imageheight":38,
          "imagewidth":28
         }, 
         {
-         "id":178,
+         "id":237,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_6.png",
          "imageheight":38,
          "imagewidth":30
         }, 
         {
-         "id":179,
+         "id":238,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_7.png",
          "imageheight":39,
          "imagewidth":32
         }, 
         {
-         "id":180,
+         "id":239,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_8.png",
          "imageheight":40,
          "imagewidth":32
         }, 
         {
-         "id":181,
+         "id":240,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_9.png",
          "imageheight":39,
          "imagewidth":32
         }, 
         {
-         "id":182,
+         "id":241,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_coins.png",
+         "imageheight":47,
+         "imagewidth":47
+        }, 
+        {
+         "id":242,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_gem_blue.png",
+         "imageheight":36,
+         "imagewidth":46
+        }, 
+        {
+         "id":243,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_gem_green.png",
          "imageheight":36,
          "imagewidth":46
         }, 
         {
-         "id":183,
+         "id":244,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_gem_red.png",
+         "imageheight":36,
+         "imagewidth":46
+        }, 
+        {
+         "id":245,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_gem_yellow.png",
+         "imageheight":36,
+         "imagewidth":46
+        }, 
+        {
+         "id":246,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_heartEmpty.png",
          "imageheight":45,
          "imagewidth":53
         }, 
         {
-         "id":184,
+         "id":247,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_heartFull.png",
          "imageheight":45,
          "imagewidth":53
         }, 
         {
-         "id":185,
+         "id":248,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_heartHalf.png",
          "imageheight":45,
          "imagewidth":53
         }, 
         {
-         "id":186,
+         "id":249,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyBlue.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":250,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyBlue_disabled.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":251,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyGreem_disabled.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":252,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyGreen.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":253,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyRed.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":254,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyRed_disabled.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":255,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyYellow.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":256,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_keyYellow_disabled.png",
+         "imageheight":40,
+         "imagewidth":44
+        }, 
+        {
+         "id":257,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_p1.png",
          "imageheight":47,
          "imagewidth":47
         }, 
         {
-         "id":187,
+         "id":258,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_p1Alt.png",
          "imageheight":47,
          "imagewidth":47
         }, 
         {
-         "id":188,
+         "id":259,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_p2.png",
          "imageheight":47,
          "imagewidth":47
         }, 
         {
-         "id":189,
+         "id":260,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_p2Alt.png",
          "imageheight":47,
          "imagewidth":47
         }, 
         {
-         "id":190,
+         "id":261,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_p3.png",
          "imageheight":47,
          "imagewidth":47
         }, 
         {
-         "id":191,
+         "id":262,
          "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_p3Alt.png",
          "imageheight":47,
          "imagewidth":47
+        }, 
+        {
+         "id":263,
+         "image":"..\/..\/platformerGraphicsDeluxeUpdated\/HUD\/hud_x.png",
+         "imageheight":28,
+         "imagewidth":30
         }],
- "tilewidth":70,
+ "tilewidth":129,
  "type":"tileset",
  "version":1.2
 }

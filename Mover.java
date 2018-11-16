@@ -17,6 +17,8 @@ public class Mover extends Actor {
     private int worldY;
     private boolean firstLocation = true;
     private boolean hasCamera;
+    
+    
 
     /**
      * Methode to set the camera a Mover can have
