@@ -10,20 +10,30 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
+    
     private String waterTile = ("liquidWater.png");
     private boolean drown;
+    
+    public String dir;
+    public int y = 1;
+    public String teller;
+    
+    public int score;
+    
 
     public Hero() {
         super();
         gravity = 9.8;
         acc = 0.6;
         drag = 0.8;
-        setImage("p1.1.png");
+        setImage("p1_front.png");
+        scale();
     }
 
     @Override
     public void act() {
         handleInput();
+        worldBorder();
         
         velocityX *= drag;
         velocityY += acc;
@@ -42,10 +52,12 @@ public class Hero extends Mover {
         {
             if (waterTile != null)
             {
-                velocityY = 0;
+                velocityY = 2;
                 
             }
         }
+        
+        getWorld().showText("Score is: "+ score,950, 50);
     }
     
     
@@ -59,32 +71,85 @@ public class Hero extends Mover {
             Actor under = getOneObjectAtOffset (0 , getImage().getHeight() / 2 , Tile.class);
             return under != null;
         }
-        
     }
    
-    public boolean ignoreTile() {
+    public boolean inWater() {
         Actor ignore = getOneObjectAtOffset (0, getImage().getHeight() / 2 , Water.class);
         return ignore == null;
         
     }
     
     public void handleInput() {
-        if (Greenfoot.isKeyDown("w") && onGround() == true) {
-           if (ignoreTile() != true){
-               velocityY = 2;
-               drown = true;
+        if (Greenfoot.isKeyDown("w")) {
+           
+           if (onGround() == true)
+           {
+               if (inWater() != true){
+                   velocityY = 4;
+                   drown = true;
+                } else {
+                    velocityY = -17; 
+                }
             }
-           else{velocityY = -17; }
         }
 
         if (Greenfoot.isKeyDown("a")) {
-           
             velocityX = -6;
+            if (velocityY != 0 ) {
+                setImage( "p1_jump.png" );  
+                getImage().mirrorHorizontally();
+                scale();
+            } else if (onGround() == true && velocityX < 0){
+             animation();
+             getImage().mirrorHorizontally();
+            }
             
         } else if (Greenfoot.isKeyDown("d")) {
-            velocityX = 6;
+            velocityX = 6;   
+            if (velocityY != 0 ) {
+                setImage( "p1_jump.png" );
+                scale();     
+            } else if (onGround() == true && velocityX > 0)
+            {
+             animation();
+            } 
+        } else if ( Greenfoot.isKeyDown("s")){
+            setImage("p1_duck.png");
+            scale();
+        } 
+        else if (velocityY == 0 && velocityX == 0){
+            setImage("p1_front.png");
+            scale();
+            
         }
     }
+    
+    public void animation() {
+        String dir = "images/p1/PNG/p1_walk";
+        if (y != 12){
+            teller = Integer.toString(y);
+            y++;
+        }
+        else if ( y == 12){
+            y = 1;
+        }
+        setImage( dir+teller+".png");
+        scale();
+
+    }
+    
+    public void worldBorder(){
+        if (isAtEdge() == true){
+            
+            getWorld().removeObject(this);
+            
+        }
+    }
+    
+    public void scale(){
+        getImage().scale(63, 88);
+    }
+    
 
     public int getWidth() {
         return (getImage().getWidth() );
@@ -93,4 +158,5 @@ public class Hero extends Mover {
     public int getHeight() {
         return (getImage().getHeight() );
     }
+
 }
