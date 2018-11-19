@@ -26,8 +26,8 @@ public class Hero extends Mover {
         gravity = 9.8;
         acc = 0.6;
         drag = 0.8;
-        setImage("p1_front.png");
-        scale();
+        setImage("p1_front.png") ;
+        
     }
 
     @Override
@@ -96,35 +96,35 @@ public class Hero extends Mover {
         if (Greenfoot.isKeyDown("a")) {
             velocityX = -6;
             if (velocityY != 0 ) {
-                setImage( "p1_jump.png" );  
-                getImage().mirrorHorizontally();
-                scale();
+                setImage( "p1_jumpB.png" );  
+                
+                
             } else if (onGround() == true && velocityX < 0){
-             animation();
-             getImage().mirrorHorizontally();
+             animationLeft();
+             
             }
             
         } else if (Greenfoot.isKeyDown("d")) {
             velocityX = 6;   
             if (velocityY != 0 ) {
                 setImage( "p1_jump.png" );
-                scale();     
+                   
             } else if (onGround() == true && velocityX > 0)
             {
-             animation();
+             animationRight();
             } 
         } else if ( Greenfoot.isKeyDown("s")){
             setImage("p1_duck.png");
-            scale();
+            
         } 
         else if (velocityY == 0 && velocityX == 0){
             setImage("p1_front.png");
-            scale();
+            
             
         }
     }
     
-    public void animation() {
+    public void animationRight() {
         String dir = "images/p1/PNG/p1_walk";
         if (y != 12){
             teller = Integer.toString(y);
@@ -134,7 +134,20 @@ public class Hero extends Mover {
             y = 1;
         }
         setImage( dir+teller+".png");
-        scale();
+        
+
+    }
+    public void animationLeft() {
+        String dir = "images/p1/PNG/p1_walkB";
+        if (y != 12){
+            teller = Integer.toString(y);
+            y++;
+        }
+        else if ( y == 12){
+            y = 1;
+        }
+        setImage( dir+teller+".png");
+        
 
     }
     
@@ -145,11 +158,6 @@ public class Hero extends Mover {
             
         }
     }
-    
-    public void scale(){
-        getImage().scale(63, 88);
-    }
-    
 
     public int getWidth() {
         return (getImage().getWidth() );

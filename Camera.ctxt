@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Camera
+comment0.text=\r\n\r\n\ @author\ R.\ Springer\r\n
+comment1.params=tileEngine
+comment1.target=Camera(TileEngine)
+comment1.text=\r\n\ The\ constructor\ of\ the\ Camera\ class\ Camera\ class\ moves\ the\ Tiles\ and\r\n\ Mover\ classes\ around\ according\ to\ the\ camera\ position.\ Uses\ the\ tile\r\n\ engine\ to\ retrieve\ the\ tiles\ to\ move.\r\n\r\n\ @param\ tileEngine\ TileEngine\ that\ is\ used\ to\ retrieve\ the\ tiles.\r\n
+comment2.params=tileEngine\ speed
+comment2.target=Camera(TileEngine,\ int)
+comment2.text=\r\n\ The\ contructor\ of\ the\ Camera\ class\ Camera\ class\ moves\ the\ Tiles\ and\ Mover\r\n\ classes\ around\ according\ to\ the\ camera\ position.\ Uses\ the\ tile\ engine\ to\r\n\ retrieve\ the\ tiles\ to\ move.\r\n\r\n\ @param\ tileEngine\ TileEngine\ that\ is\ used\ to\ retrieve\ te\ tiles.\r\n\ @param\ speed\ the\ speed\ of\ the\ movement\ of\ the\ camera\ (Free\ movement)\r\n
+comment3.params=mover
+comment3.target=void\ follow(Mover)
+comment3.text=\r\n\ This\ methode\ will\ make\ this\ class\ follow\ the\ Mover\ you\ give.\r\n\r\n\ @param\ mover\ A\ Mover\ class\ or\ an\ extend\ of\ it.\ The\ Mover\ class\ is\ able\ to\r\n\ be\ followed.\r\n
+comment4.params=
+comment4.target=void\ act()
+comment5.params=dirX\ dirY
+comment5.target=void\ move(double,\ double)
+comment5.text=\r\n\ This\ methode\ can\ be\ used\ to\ move\ the\ camera\ around\ the\ world.\ Make\ sure\r\n\ you\ don't\ move\ when\ you\ are\ following.\r\n\r\n\ @param\ dirX\ The\ direction\ x\r\n\ @param\ dirY\ The\ direction\ y\r\n
+comment6.params=
+comment6.target=void\ updateView()
+comment6.text=\r\n\ This\ method\ will\ update\ the\ Tiles\ from\ the\ engine\ to\ match\ the\ view.\ Also\r\n\ it\ will\ update\ all\ the\ Movers\ classes\ in\ the\ wolrd.\ So\ objects\ move\r\n\ around\ with\ the\ camera.\ If\ an\ Actor\ class\ is\ added\ it\ will\ not\ move\r\n\ around\ with\ the\ camera.\ It\ has\ to\ be\ a\ class\ that\ is\ the\ Mover\ or\ a\r\n\ extend\ of\ the\ Mover\ class.\r\n
+numComments=7

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Mover
+comment0.text=\r\n\r\n\ @author\ R.\ Springer\r\n
+comment1.params=camera
+comment1.target=void\ setCamera(Camera)
+comment1.text=\r\n\ Methode\ to\ set\ the\ camera\ a\ Mover\ can\ have\r\n\r\n\ @param\ camera\ A\ Camera\ class\r\n
+comment2.params=
+comment2.target=void\ removeCamera()
+comment2.text=\r\n\ Removes\ the\ camera\ if\ a\ camera\ has\ been\ set\r\n
+comment3.params=
+comment3.target=void\ applyVelocity()
+comment3.text=\r\n\ Apply\ change\ in\ position\ based\ on\ velocityX\ and\ velocityY\r\n
+comment4.params=x\ y
+comment4.target=void\ setLocation(int,\ int)
+comment5.params=
+comment5.target=int\ getX()
+comment6.params=
+comment6.target=int\ getY()
+comment7.params=
+comment7.target=int\ getScreenX()
+comment7.text=\r\n\ Returns\ the\ x\ position\ based\ on\ the\ screen\r\n\r\n\ @return\r\n
+comment8.params=
+comment8.target=int\ getScreenY()
+comment8.text=\r\n\ Returns\ the\ y\ position\ based\ on\ the\ screen\r\n\r\n\ @return\r\n
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10
