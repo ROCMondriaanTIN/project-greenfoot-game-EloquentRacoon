@@ -162,8 +162,10 @@ public class Hero extends Mover {
     public void worldBorder(){
         if (isAtEdge() == true){
             
-            MyWorld world = new MyWorld();
-            Greenfoot.setWorld(world);
+            
+            Level1 level1 = new Level1();
+            
+            Greenfoot.setWorld(level1);
         }
     }
     
