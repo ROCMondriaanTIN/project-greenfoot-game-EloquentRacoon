@@ -56,11 +56,18 @@ public class Hero extends Mover {
                 
             }
         }
+        for (Hero hero : getWorld().getObjects(Hero.class))
+        {
+            if (hero == null)
+            {
+                getWorld().addObject(new Hero(), 30 ,655);
+                
+            }
+        }
+        
         
         getWorld().showText("Score is: "+ score,950, 50);
     }
-    
-    
     
     public boolean onGround() {
         if (drown == true){
@@ -137,6 +144,7 @@ public class Hero extends Mover {
         
 
     }
+    
     public void animationLeft() {
         String dir = "images/p1/PNG/p1_walkB";
         if (y != 12){
@@ -154,11 +162,11 @@ public class Hero extends Mover {
     public void worldBorder(){
         if (isAtEdge() == true){
             
-            getWorld().removeObject(this);
-            
+            MyWorld world = new MyWorld();
+            Greenfoot.setWorld(world);
         }
     }
-
+    
     public int getWidth() {
         return (getImage().getWidth() );
     }
