@@ -44,7 +44,7 @@ public class Hero extends Mover {
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                getWorld().removeObject(this);
+                getWorld().removeObject(enemy);
                 break;
             }
         }
@@ -68,12 +68,23 @@ public class Hero extends Mover {
     
     public boolean onGround() {
         if (ignoreGround == true){
-            Actor under = getOneObjectAtOffset (0 , getImage().getHeight() / 2 , Tile.class);
-        return under == null;
+            return false;
         }
         else {
             Actor under = getOneObjectAtOffset (0 , getImage().getHeight() / 2 , Tile.class);
-            return under != null;
+            Tile tile = (Tile) under;
+            if(tile != null) {
+                if(tile instanceof Water) {
+                        
+                        ignoreGround = true;
+                        return false;
+                }  
+                if (tile.isSolid){
+                        return true;
+                    }
+            }
+            
+            return false;
         }
     }
  
@@ -159,7 +170,7 @@ public class Hero extends Mover {
     
     public void worldBorder(){
         if (isAtEdge() == true){
-            Greenfoot.setWorld(new LevelSelect());
+            LevelManager.getInstance().setLevel(0);
             getWorld().removeObject(this);
         }
     }

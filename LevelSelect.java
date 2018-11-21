@@ -6,9 +6,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LevelSelect extends World
+public class LevelSelect extends BasicWorld
 {
-    private CollisionEngine ce;
+    
+    
+    Hero hero;
     /**
      * Constructor for objects of class LevelSelect.
      * 
@@ -16,7 +18,7 @@ public class LevelSelect extends World
     public LevelSelect()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 1000, 1 , false); 
+        super(); 
         this.setBackground("grot.png");
 
         
@@ -56,37 +58,54 @@ public class LevelSelect extends World
 56,50,39,39,39,52,56,56,50,39,56,56,56,56,56,56,50,39,39,39,56,56,56,56,50,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 
 };
-
-
-        // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
-        TileEngine te = new TileEngine(this, 75, 75, map);
-        // Declarenre en initialiseren van de camera klasse met de TileEngine klasse 
+        setMap(map);
+        
+    }
+    
+    public void startWorld() {
+        super.startWorld();
+        for(Actor actor: getObjects(Hero.class)) {
+            if(actor != null) {
+                removeObject(actor);
+            }
+        }
+        addObject(hero,100, 500);
+    }
+    
+    public void initWorld(){
+        super.initWorld();
+                // Declarenre en initialiseren van de camera klasse met de TileEngine klasse 
         // zodat de camera weet welke tiles allemaal moeten meebewegen met de camera
-        Camera camera = new Camera(te);
+
         // Declareren en initialiseren van een main karakter van het spel mijne heet Hero. Deze klasse 
         // moet de klasse Mover extenden voor de camera om te werken
-        Hero hero = new Hero();
+        hero = new Hero();
 
         // Laat de camera een object volgen. Die moet een Mover instatie zijn of een extentie hiervan.
         camera.follow(hero);
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 80, 1910);
-        addObject(hero, 70, 2260);
+        //addObject(hero,100, 1760);
+        addObject(hero,100, 300);
         //addObject(new Enemy(), 1170, 410);
         
-        // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
-        // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
-        ce = new CollisionEngine(te, camera);
+
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
-        
-        
+    }
+    
+    public void endWorld() {
+        super.endWorld();
+        removeObject(hero);
     }
         
     @Override
     public void act() {
         ce.update();
+        if(Greenfoot.isKeyDown("r")) {
+            LevelManager.getInstance().setLevel(2);
+        }
     }
     
 }

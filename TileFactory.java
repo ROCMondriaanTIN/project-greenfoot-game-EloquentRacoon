@@ -1025,19 +1025,19 @@ public class TileFactory{
          
          
          case 168:
-         tile = new Torch("torchLit1.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Tile("torchLit1.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;
          break;
          
          
          case 169:
-         tile = new Torch("torchLit2.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Tile("torchLit2.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;
          break;
          
          
          case 170:
-         tile = new Torch("torch.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Tile("torch.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;
          break;
          

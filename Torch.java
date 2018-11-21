@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Torch extends NoCollision
+public class Torch extends Tile
 {
     private String dir;
     private String teller;
@@ -26,7 +26,7 @@ public class Torch extends NoCollision
      */
     public void act() 
     {
-        torchanimation();
+        //torchanimation();
         
     }    
     private void torchanimation(){

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=LevelManager
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ LevelArrayList\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=LevelManager()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LevelArrayList.\r\n\ \r\n
+comment2.params=world
+comment2.target=void\ setCurrentWorld(BasicWorld)
+comment3.params=levelNumber
+comment3.target=void\ setLevel(int)
+comment4.params=
+comment4.target=LevelManager\ getInstance()
+numComments=5
