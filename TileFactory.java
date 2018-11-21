@@ -630,19 +630,19 @@ public class TileFactory{
          
          case 102:
          tile = new Tile("ropeAttached.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
          case 103:
          tile = new Tile("ropeHorizontal.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
          case 104:
          tile = new Tile("ropeVertical.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
@@ -768,25 +768,25 @@ public class TileFactory{
          
          case 125:
          tile = new Tile("sign.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
          case 126:
          tile = new Tile("signExit.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
          case 127:
          tile = new Tile("signLeft.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
          case 128:
          tile = new Tile("signRight.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
@@ -1025,20 +1025,20 @@ public class TileFactory{
          
          
          case 168:
-         tile = new Tile("tochLit.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile = new Torch("torchLit1.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile.isSolid = false;
          break;
          
          
          case 169:
-         tile = new Tile("tochLit2.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile = new Torch("torchLit2.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile.isSolid = false;
          break;
          
          
          case 170:
-         tile = new Tile("torch.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile = new Torch("torch.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile.isSolid = false;
          break;
          
          
@@ -1598,6 +1598,8 @@ public class TileFactory{
          tile = new Tile("hud_x.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = true;
          break;
+         
+         
             
  
             default:

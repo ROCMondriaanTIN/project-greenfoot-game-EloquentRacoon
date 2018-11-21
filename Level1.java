@@ -96,7 +96,8 @@ public class Level1 extends World
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
 
-        
+        camera.act();
+        hero.act();
     }
     
         

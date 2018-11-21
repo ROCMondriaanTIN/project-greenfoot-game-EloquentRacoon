@@ -1,20 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Water here.
+ * Write a description of class NoInteraction here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Water extends NoCollision
-{
-
-    public Water(String image, int width, int heigth)
-    {
+public class NoCollision extends Tile
+{   
+    public boolean isSolid = false;
+    private static int id;
+    public int _id;
+    public NoCollision(String image, int width, int heigth) {
         super(image, width, heigth);
     }
+
     /**
-     * Act - do whatever the Water wants to do. This method is called whenever
+     * Act - do whatever the NoInteraction wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

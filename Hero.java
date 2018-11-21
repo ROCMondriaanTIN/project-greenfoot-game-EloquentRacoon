@@ -12,13 +12,14 @@ public class Hero extends Mover {
     private final double drag;
     
     private String waterTile = ("liquidWater.png");
-    private boolean drown;
+    private boolean ignoreGround;
     
-    public String dir;
-    public int y = 1;
-    public String teller;
+    private String dir;
+    private int y = 1;
+    private String teller;
     
-    public int score;
+    public static int score;
+    public boolean torch;
     
 
     public Hero() {
@@ -33,8 +34,7 @@ public class Hero extends Mover {
     @Override
     public void act() {
         handleInput();
-        worldBorder();
-        
+                
         velocityX *= drag;
         velocityY += acc;
         if (velocityY > gravity) {
@@ -56,21 +56,18 @@ public class Hero extends Mover {
                 
             }
         }
-        for (Hero hero : getWorld().getObjects(Hero.class))
-        {
-            if (hero == null)
-            {
-                getWorld().addObject(new Hero(), 30 ,655);
-                
+        for (Actor torch : getIntersectingObjects(Torch.class)){
+            if (torch != null){
+                ignoreGround = true;
             }
         }
         
-        
         getWorld().showText("Score is: "+ score,950, 50);
+        worldBorder();
     }
     
     public boolean onGround() {
-        if (drown == true){
+        if (ignoreGround == true){
             Actor under = getOneObjectAtOffset (0 , getImage().getHeight() / 2 , Tile.class);
         return under == null;
         }
@@ -79,23 +76,24 @@ public class Hero extends Mover {
             return under != null;
         }
     }
-   
+ 
     public boolean inWater() {
         Actor ignore = getOneObjectAtOffset (0, getImage().getHeight() / 2 , Water.class);
-        return ignore == null;
         
+        return ignore == null;
     }
-    
+        
     public void handleInput() {
         if (Greenfoot.isKeyDown("w")) {
            
            if (onGround() == true)
            {
-               if (inWater() != true){
+               if (inWater() == false){
                    velocityY = 4;
-                   drown = true;
+                   ignoreGround = true;
+                 
                 } else {
-                    velocityY = -17; 
+                    velocityY = -17;
                 }
             }
         }
@@ -161,11 +159,8 @@ public class Hero extends Mover {
     
     public void worldBorder(){
         if (isAtEdge() == true){
-            
-            
-            Level1 level1 = new Level1();
-            
-            Greenfoot.setWorld(level1);
+            Greenfoot.setWorld(new LevelSelect());
+            getWorld().removeObject(this);
         }
     }
     
