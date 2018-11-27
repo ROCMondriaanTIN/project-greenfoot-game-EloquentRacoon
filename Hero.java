@@ -6,7 +6,8 @@ import greenfoot.*;
  * @author R. Springer
  */
 public class Hero extends Mover {
-
+    
+    
     private final double gravity;
     private final double acc;
     private final double drag;
@@ -28,6 +29,8 @@ public class Hero extends Mover {
         acc = 0.6;
         drag = 0.8;
         setImage("p1_front.png") ;
+        
+        
         
     }
 
@@ -172,6 +175,8 @@ public class Hero extends Mover {
         if (isAtEdge() == true){
             LevelManager.getInstance().setLevel(0);
             getWorld().removeObject(this);
+            
+            BasicWorld.initialized = false;
         }
     }
     

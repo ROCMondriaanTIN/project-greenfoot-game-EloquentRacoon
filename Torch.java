@@ -26,7 +26,7 @@ public class Torch extends Tile
      */
     public void act() 
     {
-        //torchanimation();
+        torchanimation();
         
     }    
     private void torchanimation(){

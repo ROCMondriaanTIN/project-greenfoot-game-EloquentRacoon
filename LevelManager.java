@@ -20,8 +20,8 @@ public class LevelManager
     private LevelManager() 
     {    
         worlds.add(new LevelSelect());
-        worlds.add(new Level());
-        worlds.add(new MyWorld());
+        worlds.add(new Level_1());
+        worlds.add(new Level_2());
 
     }
     
