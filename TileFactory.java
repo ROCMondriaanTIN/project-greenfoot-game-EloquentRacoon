@@ -377,7 +377,7 @@ public class TileFactory{
          
          
          case 60:
-         tile = new Tile("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 0);
          tile.isSolid = false;
          break;
          

@@ -141,7 +141,7 @@ public class Hero extends Mover {
             }
             
         } else if (Greenfoot.isKeyDown("d")) {
-            velocityX = 6;   dwwwww
+            velocityX = 6;  
             if (velocityY != 0 ) {
                 setImage( "p1_jump.png" );
                    

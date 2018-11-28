@@ -20,6 +20,7 @@ public class LevelSelect extends BasicWorld
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
         this.setBackground("bg.png");
+        
 
         int[][] map = {
     {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
@@ -73,12 +74,14 @@ public class LevelSelect extends BasicWorld
     },};
     
         setMap(map);
+        
         initWorld();
-    
+        
+        
             //camera.act();
             //hero.act();
     }
-        
+         
     public void initWorld() {
         super.initWorld();
     // Declarenre en initialiseren van de camera klasse met de TileEngine klasse 
