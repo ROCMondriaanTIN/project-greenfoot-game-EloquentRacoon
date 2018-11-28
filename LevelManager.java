@@ -9,6 +9,7 @@ import java.util.*;
 public class LevelManager
 {
     ArrayList<BasicWorld> worlds = new ArrayList<BasicWorld>();
+     
     BasicWorld currentWorld = null;
     
     private static LevelManager instance = null;
@@ -19,9 +20,15 @@ public class LevelManager
      */
     private LevelManager() 
     {    
-        worlds.add(new LevelSelect());
-        worlds.add(new Level_1());
-        worlds.add(new Level_2());
+        worlds.add(new LevelSelect());      //0
+        worlds.add(new Level_1());          //1
+        worlds.add(new Level_2());          //2
+        worlds.add(new Level_3());          //3
+        worlds.add(new Level_4());          //4
+        
+        worlds.add(new Level_Tutorial());   //5
+        
+        
 
     }
     

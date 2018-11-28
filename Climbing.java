@@ -18,6 +18,6 @@ public class Climbing extends Tile
      */
     public void act() 
     {
-        // Add your action code here.
+        
     }    
 }

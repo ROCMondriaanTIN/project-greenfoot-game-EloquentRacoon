@@ -8,6 +8,7 @@ import greenfoot.*;
 public class Hero extends Mover {
     
     
+    
     private final double gravity;
     private final double acc;
     private final double drag;
@@ -21,6 +22,8 @@ public class Hero extends Mover {
     
     public static int score;
     public boolean torch;
+    
+    //public static int number;
     
 
     public Hero() {
@@ -56,14 +59,25 @@ public class Hero extends Mover {
             if (waterTile != null)
             {
                 velocityY = 2;
-                
+                break;
             }
         }
         for (Actor torch : getIntersectingObjects(Torch.class)){
             if (torch != null){
                 ignoreGround = true;
+                break;
+            }
+            else {
+                ignoreGround = false;
             }
         }
+        for (Actor climbing : getIntersectingObjects(Climbing.class)) {
+            if (climbing != null && Greenfoot.isKeyDown("w")) {
+                velocityY = -4; 
+                break;
+            }
+        }
+        
         
         getWorld().showText("Score is: "+ score,950, 50);
         worldBorder();
@@ -99,7 +113,9 @@ public class Hero extends Mover {
         
     public void handleInput() {
         if (Greenfoot.isKeyDown("w")) {
-           
+           if (velocityY != 0){
+               setImage( "p1_jump.png" );
+            }
            if (onGround() == true)
            {
                if (inWater() == false){
@@ -107,9 +123,10 @@ public class Hero extends Mover {
                    ignoreGround = true;
                  
                 } else {
-                    velocityY = -17;
+                    velocityY = -15;
                 }
             }
+           
         }
 
         if (Greenfoot.isKeyDown("a")) {
@@ -124,7 +141,7 @@ public class Hero extends Mover {
             }
             
         } else if (Greenfoot.isKeyDown("d")) {
-            velocityX = 6;   
+            velocityX = 6;   dwwwww
             if (velocityY != 0 ) {
                 setImage( "p1_jump.png" );
                    
@@ -173,9 +190,9 @@ public class Hero extends Mover {
     
     public void worldBorder(){
         if (isAtEdge() == true){
-            LevelManager.getInstance().setLevel(0);
-            getWorld().removeObject(this);
             
+            getWorld().removeObject(this);
+            LevelManager.getInstance().setLevel(0);
             BasicWorld.initialized = false;
         }
     }

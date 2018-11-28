@@ -11,6 +11,7 @@ public class Torch extends Tile
     private String dir;
     private String teller;
     private int y = 1;
+    private int x = 1;
     
     
     
@@ -35,13 +36,16 @@ public class Torch extends Tile
             teller = Integer.toString(y);
             y++;
         }
-        else if ( y == 3){
+        else if ( y == 7){
+            x = Greenfoot.getRandomNumber(10);
             y = 1;
         }
-        if (y == 1){
+        if (x > 0 && x < 6){
             setImage("torchLit1.png");
-        } else if (y == 2){
+            isSolid = false;
+        } else if (x > 5 && x < 11){
             setImage("torchLit2.png");
+            isSolid = false;
         }
         
         

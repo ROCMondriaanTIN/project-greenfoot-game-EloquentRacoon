@@ -69,7 +69,7 @@ public class Level_1 extends BasicWorld
             }
         }
         if(hero != null) {
-            addObject(hero,100, 500);
+            addObject(hero,100, 2125);
         }
     }
     
@@ -88,7 +88,7 @@ public class Level_1 extends BasicWorld
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 80, 1910);
         //addObject(hero,100, 1760);
-        addObject(hero,100, 300);
+        
         //addObject(new Enemy(), 1170, 410);
         
 
