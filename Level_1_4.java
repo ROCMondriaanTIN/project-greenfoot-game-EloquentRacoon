@@ -6,14 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level_4 extends BasicWorld
+public class Level_1_4 extends BasicWorld
 {
 
     /**
      * Constructor for objects of class Level_4.
      * 
      */
-    public Level_4()
+    public Level_1_4()
     {
     }
 }

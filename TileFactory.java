@@ -377,7 +377,7 @@ public class TileFactory{
          
          
          case 60:
-         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 0);
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 5);
          tile.isSolid = false;
          break;
          
@@ -1121,8 +1121,8 @@ public class TileFactory{
          
          
          case 184:
-         tile = new Tile("chain.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile = new Climbing("chain.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile.isSolid = false;
          break;
          
          
@@ -1349,7 +1349,7 @@ public class TileFactory{
          
          
          case 222:
-         tile = new Tile("spikes.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Damaging("spikes.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = true;
          break;
          

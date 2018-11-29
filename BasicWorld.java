@@ -26,9 +26,9 @@ public class BasicWorld extends World
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         te = new TileEngine(this, 70, 70);
         
-        initWorld();
+        
         startWorld();
-
+        
     }
     
     public void startWorld() {
@@ -36,7 +36,7 @@ public class BasicWorld extends World
             te.setMap(map);
             TileEngine.MAP_HEIGHT = this.map.length;
             TileEngine.MAP_WIDTH = this.map[0].length;
-            
+            initWorld();
         }
         
     }
@@ -50,10 +50,10 @@ public class BasicWorld extends World
     }
     
     public void initWorld() {
+        
+        initialized = true;
         camera = new Camera(te);
         ce = new CollisionEngine(te, camera);
-        initialized = true;
-        
         System.out.println("Init!" + this.getClass().getName());
     }
     

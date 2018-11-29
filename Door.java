@@ -8,14 +8,16 @@ import java.util.*;
  */
 public class Door extends Tile
 {
-    int wereld;
+    static int wereld;
+    Hero hero;
     public Door(String image, int width, int heigth, int wereld){
         super(image, width, heigth);
         this.wereld = wereld;
         
         
     }
-    public  int number;
+    public static int number;
+    
 
     /**
      * Act - do whatever the Door wants to do. This method is called whenever
@@ -23,6 +25,10 @@ public class Door extends Tile
      */
     public void act() 
     {
+        
+    }    
+    public static void deur(){
+        
         switch (wereld){
             case 0:
             number = 0;
@@ -53,11 +59,7 @@ public class Door extends Tile
         }
         number = number;
         
-        for (Actor door : getIntersectingObjects(Hero.class)) {
-            if (door != null && Greenfoot.isKeyDown("p")) {
-                LevelManager.getInstance().setLevel(number);
-            }
-        }
-    }    
+        
+    }
     
 }

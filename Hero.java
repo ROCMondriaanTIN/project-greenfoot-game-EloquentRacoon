@@ -7,6 +7,7 @@ import greenfoot.*;
  */
 public class Hero extends Mover {
     
+    Hero hero;
     
     
     private final double gravity;
@@ -40,6 +41,7 @@ public class Hero extends Mover {
     @Override
     public void act() {
         handleInput();
+        
                 
         velocityX *= drag;
         velocityY += acc;
@@ -77,11 +79,20 @@ public class Hero extends Mover {
                 break;
             }
         }
+        Door.deur();
+        for (Actor door : getIntersectingObjects(Door.class)) {
+            if (door != null && Greenfoot.isKeyDown("space")) {
+                
+                LevelManager.getInstance().setLevel(Door.number);
+                heroCheck();
+            }
+        }
+    
         
         
-        
-        getWorld().showText("Score is: "+ score,950, 50);
         worldBorder();
+        //getWorld().showText("Score is: "+ score,950, 50);
+        
     }
     
     public boolean onGround() {
@@ -190,13 +201,17 @@ public class Hero extends Mover {
     }
     
     public void worldBorder(){
-        if (isAtEdge() == true){
-            
-            getWorld().removeObject(this);
-            LevelManager.getInstance().setLevel(0);
-            BasicWorld.initialized = false;
-                        
-        }
+        
+    }
+    public void heroCheck(){
+         for(Actor player: getWorld().getObjects(Hero.class)) {
+                if(player != null) {
+                    getWorld().removeObject(this);
+                 }        
+         }
+         if(hero != null) {
+                    getWorld().addObject(hero , 30 ,30 );
+                 }
     }
     
     public int getWidth() {

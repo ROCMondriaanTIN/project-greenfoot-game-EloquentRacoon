@@ -23,18 +23,10 @@ public class MyWorld extends BasicWorld {
     }
     public void act(){
         if (Greenfoot.isKeyDown("space")){
-            LevelManager.getInstance().setLevel(0);
+            LevelManager.getInstance().setLevel(5);
+            
         }
+        
     }
-     public void startWorld() {
-        super.startWorld();
-        for(Actor actor: getObjects(Hero.class)) {
-            if(actor != null) {
-                removeObject(actor);
-            }
-        }
-        if(hero != null) {
-            addObject(hero, 30, 2975);
-        }
-    }
+     
 }

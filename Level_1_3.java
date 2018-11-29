@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level_3 extends BasicWorld
+public class Level_1_3 extends BasicWorld
 {
 
    Hero hero;
@@ -14,7 +14,7 @@ public class Level_3 extends BasicWorld
      * Constructor for objects of class Level_2.
      * 
      */
-    public Level_3()
+    public Level_1_3()
     {
           super();
         this.setBackground("grot.png");
