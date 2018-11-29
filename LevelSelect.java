@@ -83,14 +83,14 @@ public class LevelSelect extends BasicWorld
     }
          
     public void initWorld() {
-        super.initWorld();
+        
     // Declarenre en initialiseren van de camera klasse met de TileEngine klasse 
         // zodat de camera weet welke tiles allemaal moeten meebewegen met de camera
 
         // Declareren en initialiseren van een main karakter van het spel mijne heet Hero. Deze klasse 
         // moet de klasse Mover extenden voor de camera om te werken
         Hero hero = new Hero();
-
+        super.initWorld();
         // Laat de camera een object volgen. Die moet een Mover instatie zijn of een extentie hiervan.
         camera.follow(hero);
 

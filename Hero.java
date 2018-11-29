@@ -73,10 +73,11 @@ public class Hero extends Mover {
         }
         for (Actor climbing : getIntersectingObjects(Climbing.class)) {
             if (climbing != null && Greenfoot.isKeyDown("w")) {
-                velocityY = -4; 
+                velocityY = -5; 
                 break;
             }
         }
+        
         
         
         getWorld().showText("Score is: "+ score,950, 50);
@@ -194,6 +195,7 @@ public class Hero extends Mover {
             getWorld().removeObject(this);
             LevelManager.getInstance().setLevel(0);
             BasicWorld.initialized = false;
+                
         }
     }
     
