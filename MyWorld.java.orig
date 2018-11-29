@@ -1,0 +1,63 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ *
+ * @author R. Springer
+ */
+<<<<<<< HEAD
+public class MyWorld extends BasicWorld {
+    
+    
+    Hero hero;
+    
+=======
+public class MyWorld extends World {
+
+    private CollisionEngine ce;
+
+>>>>>>> 4372fff5ea53a9c16ee13c8083969eac7aeee2f9
+    /**
+     * Constructor for objects of class MyWorld.
+     *
+     */
+    public MyWorld() {
+        super(); 
+        this.setBackground("bg.png");
+       
+        
+<<<<<<< HEAD
+        
+    }
+    public void act(){
+        if (Greenfoot.isKeyDown("space")){
+            LevelManager.getInstance().setLevel(0);
+        }
+    }
+     public void startWorld() {
+        super.startWorld();
+        for(Actor actor: getObjects(Hero.class)) {
+            if(actor != null) {
+                removeObject(actor);
+            }
+        }
+        if(hero != null) {
+            addObject(hero, 30, 2975);
+        }
+=======
+        // Force act zodat de camera op de juist plek staat.
+        camera.act();
+        hero.act();
+
+        // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
+        // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
+        ce = new CollisionEngine(te, camera);
+        // Toevoegen van de mover instantie of een extentie hiervan
+        ce.addCollidingMover(hero);
+    }
+
+    @Override
+    public void act() {
+        ce.update();
+>>>>>>> 4372fff5ea53a9c16ee13c8083969eac7aeee2f9
+    }
+}
