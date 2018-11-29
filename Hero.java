@@ -195,7 +195,7 @@ public class Hero extends Mover {
             getWorld().removeObject(this);
             LevelManager.getInstance().setLevel(0);
             BasicWorld.initialized = false;
-                
+                        
         }
     }
     
