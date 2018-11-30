@@ -28,7 +28,7 @@ public class BasicWorld extends World
         
         
         startWorld();
-        
+        initWorld();
     }
     
     public void startWorld() {
@@ -36,7 +36,7 @@ public class BasicWorld extends World
             te.setMap(map);
             TileEngine.MAP_HEIGHT = this.map.length;
             TileEngine.MAP_WIDTH = this.map[0].length;
-            initWorld();
+            
         }
         
     }

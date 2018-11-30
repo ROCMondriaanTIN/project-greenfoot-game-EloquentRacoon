@@ -21,7 +21,7 @@ public class Hero extends Mover {
     private int y = 1;
     private String teller;
     
-    public static int score;
+    public static int score = 0;
     public boolean torch;
     
     //public static int number;
@@ -87,11 +87,11 @@ public class Hero extends Mover {
                 heroCheck();
             }
         }
-    
         
         
-        worldBorder();
-        //getWorld().showText("Score is: "+ score,950, 50);
+        
+        
+        getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
         
     }
     
@@ -200,9 +200,7 @@ public class Hero extends Mover {
 
     }
     
-    public void worldBorder(){
-        
-    }
+    
     public void heroCheck(){
          for(Actor player: getWorld().getObjects(Hero.class)) {
                 if(player != null) {
