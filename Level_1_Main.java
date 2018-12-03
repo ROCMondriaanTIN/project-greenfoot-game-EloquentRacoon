@@ -75,6 +75,7 @@ public class Level_1_Main extends BasicWorld
     
     setMap(map);
     initWorld();
+    addObject (new Vragen(),0,0);
     }
     
     public void startWorld() {
@@ -113,6 +114,8 @@ public class Level_1_Main extends BasicWorld
         
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
+        //Vragen v = new Vragen();
+        
     }
         
     @Override

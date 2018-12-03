@@ -21,7 +21,7 @@ public class Hero extends Mover {
     private int y = 1;
     private String teller;
     
-    public static int score = 0;
+    public int score = 0;
     public boolean torch;
     
     //public static int number;
@@ -91,8 +91,11 @@ public class Hero extends Mover {
         
         
         
-        getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
+        //getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
+        //getWorld().showText(Vraag.vraag ,950, 80);
+        //getWorld().showText(Vraag.antwoord, 950, 110);
         
+        //System.out.println(vragenlijst.get(0).antwoord);
     }
     
     public boolean onGround() {

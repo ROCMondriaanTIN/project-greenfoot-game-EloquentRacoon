@@ -11,9 +11,17 @@ public class Vraag
 {   public String vraag;
     public String antwoord;
     
-    public Vraag(String v, String a){
-        vraag = v;
-        antwoord =a;
+    
+    public Vraag(String vragen, String antwoorden){
+        this.vraag = vragen;
+        this.antwoord = antwoorden;
+
     }
-     
-}
+    
+        
+        
+            
+        
+    }
+    
+
