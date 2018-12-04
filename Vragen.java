@@ -19,14 +19,15 @@ public class Vragen extends Actor
     {
             
             vraagToevoegen();
-            if (firstact){
+            if (firstact = true){
             firstact = false;
                 for (int i = 0; i < vragenlijst.size(); i++){
                 for (int x = 0; x < vragenlijst.get(i).antwoord.length(); x++){
                     char y = vragenlijst.get(i).antwoord.charAt(x);
-                    //getWorld().addObject(new Letter(y),0,0);
+                    for (int z = 0; z < vragenlijst.get(i).antwoord.length(); z++){
+                        //characterz = y; 
+                    }
                 }
-                
             }
         }
     }    

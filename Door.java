@@ -8,15 +8,15 @@ import java.util.*;
  */
 public class Door extends Tile
 {
-    static int wereld;
+    int wereld;
     Hero hero;
-    public Door(String image, int width, int heigth, int wereld){
+    public Door(String image, int width, int heigth, int wereldnummer){
         super(image, width, heigth);
-        this.wereld = wereld;
+        this.wereld = wereldnummer;
         
         
     }
-    public static int number;
+    private int number;
     
 
     /**
@@ -25,9 +25,10 @@ public class Door extends Tile
      */
     public void act() 
     {
+        deur();
         
     }    
-    public static void deur(){
+    public void deur(){
         
         switch (wereld){
             case 0:
@@ -53,12 +54,16 @@ public class Door extends Tile
             case 5:
             number = 5;
             break;
+             
             
-            default:
-            number = number;
         }
-        number = number;
-        
+        for (Actor door : getIntersectingObjects(Hero.class)) {
+            if (door != null && Greenfoot.isKeyDown("space")) {
+                
+                LevelManager.getInstance().setLevel(number);
+                //heroCheck();
+            }
+        }
         
     }
     

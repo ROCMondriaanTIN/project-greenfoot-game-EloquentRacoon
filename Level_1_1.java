@@ -104,9 +104,7 @@ public class Level_1_1 extends BasicWorld
     @Override
     public void act() {
         ce.update();
-        if(Greenfoot.isKeyDown("r")) {
-            LevelManager.getInstance().setLevel(2);
-        }
+        
     }
     
 }

@@ -20,12 +20,15 @@ public class LevelManager
      */
     private LevelManager() 
     {    
-        worlds.add(new Level_Tutorial());     //0
-        worlds.add(new Level_1_1());          //1
-        worlds.add(new Level_1_2());          //2
-        worlds.add(new Level_1_3());          //3
-        worlds.add(new Level_1_4());          //4
-        worlds.add(new Level_1_Main());       //5
+        worlds.add(0, new Level_Tutorial());     //0
+        
+        worlds.add(1, new Level_1_1());          //1
+        
+        worlds.add(2, new Level_1_2());          //2
+        
+        worlds.add(3, new Level_1_3());          //3
+        worlds.add(4, new Level_1_4());          //4
+        worlds.add(5, new Level_1_Main());       //5
         
         
 

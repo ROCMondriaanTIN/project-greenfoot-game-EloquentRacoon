@@ -27,7 +27,7 @@ public class BasicWorld extends World
         te = new TileEngine(this, 70, 70);
         
         
-        startWorld();
+        //startWorld();
         initWorld();
     }
     

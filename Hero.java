@@ -79,19 +79,13 @@ public class Hero extends Mover {
                 break;
             }
         }
-        Door.deur();
-        for (Actor door : getIntersectingObjects(Door.class)) {
-            if (door != null && Greenfoot.isKeyDown("space")) {
-                
-                LevelManager.getInstance().setLevel(Door.number);
-                heroCheck();
-            }
-        }
         
         
         
         
-        //getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
+        
+        
+        getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
         //getWorld().showText(Vraag.vraag ,950, 80);
         //getWorld().showText(Vraag.antwoord, 950, 110);
         
