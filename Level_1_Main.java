@@ -11,6 +11,7 @@ public class Level_1_Main extends BasicWorld
     
     
     Hero hero;
+    private boolean run = true;
     /**
      * Constructor for objects of class LevelSelect.
      * 
@@ -75,19 +76,27 @@ public class Level_1_Main extends BasicWorld
     
     setMap(map);
     initWorld();
-    addObject (new Vragen(),0,0);
+    Vragen.vragenMaken();
+    
+    Vragen.laadVraag(0);
+    
+    
     }
     
     public void startWorld() {
         super.startWorld();
-        for(Actor actor: getObjects(Hero.class)) {
-            if(actor != null) {
-                removeObject(actor);
+        
+        if (run == true){
+            run = false;
+                for(Actor actor: getObjects(Hero.class)) {
+                if(actor != null) {
+                    removeObject(actor);
+                }
             }
         }
         if(hero != null) {
-            addObject(hero,50, 2975);
-        }
+                addObject(hero,50, 2975);
+            }
     }
     
     @Override

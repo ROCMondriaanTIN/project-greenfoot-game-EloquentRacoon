@@ -12,11 +12,15 @@ public class Vraag
     public String antwoord;
     
     
+    
     public Vraag(String vragen, String antwoorden){
         this.vraag = vragen;
         this.antwoord = antwoorden;
-
+        
+        
+        
     }
+        
     
         
         

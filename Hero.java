@@ -86,7 +86,7 @@ public class Hero extends Mover {
         
         
         getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
-        //getWorld().showText(Vraag.vraag ,950, 80);
+        //getWorld().showText(Letter.c ,950, 80);
         //getWorld().showText(Vraag.antwoord, 950, 110);
         
         //System.out.println(vragenlijst.get(0).antwoord);

@@ -1629,10 +1629,7 @@ public class TileFactory{
          tile.isSolid = false;
          break;
          
-         case 270:
-         tile = new Letter("empty", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = false;
-         break;
+        
          
          
             
