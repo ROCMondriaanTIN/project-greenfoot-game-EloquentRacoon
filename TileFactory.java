@@ -1629,15 +1629,16 @@ public class TileFactory{
          tile.isSolid = false;
          break;
          
+         
         
          
          
             
  
-            default:
-                tile = new Tile("grassMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-                tile.isSolid = true;
-                break;
+         default:
+         tile = new Tile("grassMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile.isSolid = true;
+         break;
         }
         return tile;
         

@@ -21,6 +21,7 @@ public class Hero extends Mover {
     private int y = 1;
     private String teller;
     
+    
     public int score = 0;
     public boolean torch;
     
@@ -80,12 +81,15 @@ public class Hero extends Mover {
             }
         }
         
+        if (Greenfoot.isKeyDown("p")){
+            Letter.str.setLength(0);
+        }
         
         
         
         
         
-        getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
+        //getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
         //getWorld().showText(Letter.c ,950, 80);
         //getWorld().showText(Vraag.antwoord, 950, 110);
         

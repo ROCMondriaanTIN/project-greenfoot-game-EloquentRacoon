@@ -100,12 +100,18 @@ public class Level_1_1 extends BasicWorld
         super.endWorld();
         removeObject(hero);
     }
+    
+    public void spawnLetters(){
+        
+    }
         
     @Override
     public void act() {
         ce.update();
         
     }
+    
+    
     
 }
 

@@ -11,6 +11,16 @@ public class Vragen extends Actor
     public static ArrayList<Vraag> vragenlijst_1 = new ArrayList<Vraag>();
     boolean firstact = true;
     
+    static char y;
+    static int vraagNummer;
+    
+    public Vragen(){
+        vragenlijst_1.add(new Vraag("Wat is auto in het Engels?", "car"));
+        vragenlijst_1.add(new Vraag("Wat is fiets in het Engels?", "bike"));
+        vragenlijst_1.add(new Vraag("Wat is boot in het Engels?", "boat"));
+        vragenlijst_1.add(new Vraag("Wat is trein in het Engels?", "train")); 
+        vragenlijst_1.add(new Vraag("Wat is vliegtuig in het Engels?", "airplane"));
+    }
 
     /**
      * Act - do whatever the Vragen wants to do. This method is called whenever
@@ -20,25 +30,24 @@ public class Vragen extends Actor
     {
         
     }    
-    public static void vragenMaken(){
-        vragenlijst_1.add(new Vraag("Wat is auto in het Engels?", "car"));
-        vragenlijst_1.add(new Vraag("Wat is fiets in het Engels?", "bike"));
-        vragenlijst_1.add(new Vraag("Wat is vliegtuig in het Engels?", "airplane"));
-
-    }
-    public static void laadVraag(int vraagNummer){
+    
+    public static Vraag laadVraag(int vraagNummer){
+        
+        vraagNummer = vraagNummer;
+        
             switch(vraagNummer){
                 case 0:
+                System.out.println(vragenlijst_1.get(vraagNummer).antwoord);
                     for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
                         char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        System.out.println(y);
+                        //System.out.println(y);
                     }   
                     break;
                 
                 case 1:
                     for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
                         char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        System.out.println(y);
+                        
                     } 
                     break;
                     
@@ -49,9 +58,32 @@ public class Vragen extends Actor
                     } 
                     break;
                     
+                case 3:
+                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
+                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
+                        System.out.println(y);
+                    } 
+                    break;
+                    
+                case 4:
+                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
+                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
+                        System.out.println(y);
+                    } 
+                    break;
+                
+                case 5:
+                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
+                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
+                        System.out.println(y);
+                    } 
+                    break;
+                    
                 default:
                     System.out.println("er is geen vraag"); 
+                    
             }
+            return vragenlijst_1.get(vraagNummer);
     }
     
     

@@ -11,6 +11,7 @@ public class Level_1_Main extends BasicWorld
     
     
     Hero hero;
+    Liam liam;
     private boolean run = true;
     /**
      * Constructor for objects of class LevelSelect.
@@ -76,9 +77,17 @@ public class Level_1_Main extends BasicWorld
     
     setMap(map);
     initWorld();
-    Vragen.vragenMaken();
     
-    Vragen.laadVraag(0);
+    addObject(new Liam() , 100 , 2975);
+    addObject(new Letter('c'), 200 , 2950);
+    addObject(new Letter('e'), 300 , 2950);
+    addObject(new Letter('r'), 400 , 2950);
+    addObject(new Letter('a'), 500 , 2950);
+    
+    Vragen v = new Vragen();
+    Vraag vraag1 = v.laadVraag(0);
+    
+    
     
     
     }
@@ -88,14 +97,14 @@ public class Level_1_Main extends BasicWorld
         
         if (run == true){
             run = false;
-                for(Actor actor: getObjects(Hero.class)) {
-                if(actor != null) {
-                    removeObject(actor);
+                for(Actor hero: getObjects(Hero.class)) {
+                if(hero != null) {
+                    removeObject(hero);
                 }
             }
         }
         if(hero != null) {
-                addObject(hero,50, 2975);
+                addObject(hero,30, 2975);
             }
     }
     
@@ -108,6 +117,7 @@ public class Level_1_Main extends BasicWorld
         // Declareren en initialiseren van een main karakter van het spel mijne heet Hero. Deze klasse 
         // moet de klasse Mover extenden voor de camera om te werken
         hero = new Hero();
+        
 
         // Laat de camera een object volgen. Die moet een Mover instatie zijn of een extentie hiervan.
         camera.follow(hero);
@@ -115,7 +125,9 @@ public class Level_1_Main extends BasicWorld
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         
-        //addObject(new Enemy(), 200, 610);
+        
+        //addObject(new Enemy(), 200, 610); 
+        
         
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.

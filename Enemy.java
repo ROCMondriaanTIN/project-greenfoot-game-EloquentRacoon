@@ -24,24 +24,24 @@ public class Enemy extends Mover {
 
     @Override
     public void act() {
-        int x = getX();
-        int y = getY();
+        int xx = getX();
+        int yy = getY();
 
         if (firstAct) {
             firstAct = false;
-            xMin = x - walkRange / 2;
-            xMax = x + walkRange / 2;
+            xMin = xx - walkRange / 2;
+            xMax = xx + walkRange / 2;
         }
 
         velocityX = speed;
         applyVelocity();
         if (getX() >= xMax) {
             speed *= -1;
-            x = xMax;
+            xx = xMax;
             getImage().mirrorHorizontally();
         } else if (getX() <= xMin) {
             speed *= -1;
-            x = xMin;
+            xx = xMin;
             getImage().mirrorHorizontally();
         }
     }
