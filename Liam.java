@@ -14,6 +14,7 @@ public class Liam extends Mover
      */
     int gedaan = 0;
     boolean gevraagt;
+    static int laden = 0;
     
     
     
@@ -37,25 +38,38 @@ public class Liam extends Mover
        {
            if(gedaan == 0)
            {
-               //Letter.str.setLength(0); 
-               
-               if (gevraagt == false && Greenfoot.mouseClicked(this)){
+               if (gevraagt == false && Greenfoot.mouseClicked(this)){               
+                   laden = 1;
                    Vragen.laadVraag(0);
                    getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
                    gevraagt = true;
-               }
-               if (gevraagt == true && Greenfoot.mouseClicked(this)){
-                   
-                   if (Vragen.vragenlijst_1.get(Vragen.vraagNummer).antwoord.equals(Letter.str.toString())){
-                       System.out.println("het klpt");
+                }
+               if (gevraagt == true && Greenfoot.mouseClicked(this)){ 
+                    if (Vragen.vragenlijst_1.get(Vragen.vraagNummer).antwoord.equals(Letter.str.toString())){
+                        gevraagt = false;
+                        gedaan = 1;
                     }
-               }
-               
-            }
-               if (gedaan == 1){
+                    else{
+                        
+
+                    }
+                }
+           }
+           if (gedaan == 1){
+               if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                    Vragen.laadVraag(1);
                    getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
-               }
+                   gevraagt = true;
+                }
+               if ( gevraagt == true && Greenfoot.mouseClicked(this)){
+                   if (Vragen.vragenlijst_1.get(Vragen.vraagNummer).antwoord.equals(Letter.str.toString())){
+                        gevraagt = false;
+                    }
+                    else {
+                        
+                    }
+                }
+            }
                if (gedaan == 2){
                    Vragen.laadVraag(2);
                    getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);

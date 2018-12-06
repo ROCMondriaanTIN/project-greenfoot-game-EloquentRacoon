@@ -79,10 +79,7 @@ public class Level_1_Main extends BasicWorld
     initWorld();
     
     addObject(new Liam() , 100 , 2975);
-    addObject(new Letter('c'), 200 , 2950);
-    addObject(new Letter('e'), 300 , 2950);
-    addObject(new Letter('r'), 400 , 2950);
-    addObject(new Letter('a'), 500 , 2950);
+    
     
     Vragen v = new Vragen();
     Vraag vraag1 = v.laadVraag(0);

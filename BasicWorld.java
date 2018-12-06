@@ -61,4 +61,15 @@ public class BasicWorld extends World
         te.clearTilesWorld();
         
     }
+    
+    public void lettersMaken(){
+        if (Liam.laden == 1){
+            addObject(new Letter('c'), 200 , 2950);
+            addObject(new Letter('r'), 400 , 2950);
+            addObject(new Letter('a'), 500 , 2950);
+        }
+        else if (Liam.laden == 2){
+            
+        }
+    }
 }
