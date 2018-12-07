@@ -13,6 +13,7 @@ public class BasicWorld extends World
     CollisionEngine ce;
     int[][] map;
     static boolean initialized = false;
+    static int laadLetters = 0;
     
     /**
      * Constructor for objects of class BasicWorld.
@@ -36,6 +37,7 @@ public class BasicWorld extends World
             te.setMap(map);
             TileEngine.MAP_HEIGHT = this.map.length;
             TileEngine.MAP_WIDTH = this.map[0].length;
+            Hero.ignoreGround = false;
             
         }
         
@@ -62,14 +64,5 @@ public class BasicWorld extends World
         
     }
     
-    public void lettersMaken(){
-        if (Liam.laden == 1){
-            addObject(new Letter('c'), 200 , 2950);
-            addObject(new Letter('r'), 400 , 2950);
-            addObject(new Letter('a'), 500 , 2950);
-        }
-        else if (Liam.laden == 2){
-            
-        }
-    }
+    
 }

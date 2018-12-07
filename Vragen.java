@@ -12,7 +12,7 @@ public class Vragen extends Actor
     boolean firstact = true;
     
     static char y;
-    static int vraagNummer;
+    
     
     public Vragen(){
         vragenlijst_1.add(new Vraag("Wat is auto in het Engels?", "car"));
@@ -33,7 +33,7 @@ public class Vragen extends Actor
     
     public static Vraag laadVraag(int vraagNummer){
         
-        vraagNummer = vraagNummer;
+            Liam.vraagNumber = vraagNummer;
         
             switch(vraagNummer){
                 case 0:
@@ -45,6 +45,7 @@ public class Vragen extends Actor
                     break;
                 
                 case 1:
+                System.out.println(vragenlijst_1.get(vraagNummer).antwoord);
                     for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
                         char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
                         
@@ -52,6 +53,7 @@ public class Vragen extends Actor
                     break;
                     
                 case 2:
+                System.out.println(vragenlijst_1.get(vraagNummer).antwoord);
                     for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
                         char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
                         System.out.println(y);

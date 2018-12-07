@@ -377,7 +377,7 @@ public class TileFactory{
          
          
          case 60:
-         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 5);
+         tile = new Tile("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;
          break;
          
@@ -1128,7 +1128,7 @@ public class TileFactory{
          
          case 185:
          tile = new Tile("cloud1.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-         tile.isSolid = true;
+         tile.isSolid = false;
          break;
          
          
@@ -1139,7 +1139,7 @@ public class TileFactory{
          
          
          case 187:
-         tile = new Tile("cloud3.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Tile("cloud3.png",TileEngine.TILE_WIDTH * 2, TileEngine.TILE_HEIGHT);
          tile.isSolid = true;
          break;
          
@@ -1600,40 +1600,64 @@ public class TileFactory{
          break;
          
          case 264:
-         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 0);
-         tile.isSolid = false;
-         break;
-         
-         case 265:
          tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 1);
          tile.isSolid = false;
          break;
          
-         case 266:
+         case 265:
          tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 2);
          tile.isSolid = false;
          break;
          
-         case 267:
+         case 266:
          tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 3);
          tile.isSolid = false;
          break;
          
-         case 268:
+         case 267:
          tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 4);
          tile.isSolid = false;
          break;
          
-         case 269:
+         case 268:
          tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 5);
          tile.isSolid = false;
          break;
          
+         case 269:
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 6);
+         tile.isSolid = false;
+         break;
          
+         case 270:
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 7);
+         tile.isSolid = false;
+         break;
+         
+         case 271:
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 8);
+         tile.isSolid = false;
+         break;
+         
+         case 272:
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, 9);
+         tile.isSolid = false;
+         break;
+         
+         case 273:
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT,10);
+         tile.isSolid = false;
+         break;
         
+         case 274:
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT,11);
+         tile.isSolid = false;
+         break;
          
-         
-            
+         case 275:
+         tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT,12);
+         tile.isSolid = false;
+         break;   
  
          default:
          tile = new Tile("grassMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);

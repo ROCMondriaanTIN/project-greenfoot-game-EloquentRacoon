@@ -12,16 +12,17 @@ public class Liam extends Mover
      * Act - do whatever the Liam wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int gedaan = 0;
+    static int gedaan = 0;
     boolean gevraagt;
-    static int laden = 0;
     
+    static int vraagNumber;
     
     
     public Liam(){
         super();
         
-        setImage("pokerMad.png") ;
+        setImage("Liam.png") ;
+        getImage().scale(180,180);
         
     }
     
@@ -39,53 +40,76 @@ public class Liam extends Mover
            if(gedaan == 0)
            {
                if (gevraagt == false && Greenfoot.mouseClicked(this)){               
-                   laden = 1;
-                   Vragen.laadVraag(0);
-                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
+                   
+                   BasicWorld.laadLetters = 1;
+                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag, 200, 50);
                    gevraagt = true;
-                }
+               }
                if (gevraagt == true && Greenfoot.mouseClicked(this)){ 
-                    if (Vragen.vragenlijst_1.get(Vragen.vraagNummer).antwoord.equals(Letter.str.toString())){
+                    if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
                         gevraagt = false;
                         gedaan = 1;
+                        Letter.str.setLength(0);
+                        
                     }
                     else{
-                        
+                        Letter.str.setLength(0);
 
                     }
                 }
            }
            if (gedaan == 1){
                if (gevraagt == false && Greenfoot.mouseClicked(this)){    
-                   Vragen.laadVraag(1);
-                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
+                   BasicWorld.laadLetters = 2;
+                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag,200, 50);
                    gevraagt = true;
                 }
                if ( gevraagt == true && Greenfoot.mouseClicked(this)){
-                   if (Vragen.vragenlijst_1.get(Vragen.vraagNummer).antwoord.equals(Letter.str.toString())){
+                   if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
                         gevraagt = false;
+                        gedaan = 2;
+                        Letter.str.setLength(0);
                     }
                     else {
-                        
+                        Letter.str.setLength(0);
                     }
                 }
             }
-               if (gedaan == 2){
-                   Vragen.laadVraag(2);
-                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
-               }
-               if (gedaan == 3){
-                   Vragen.laadVraag(3);
-                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
-               }
-               if (gedaan == 4){
-                   Vragen.laadVraag(4);
-                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
-               }
-               if (gedaan == 5){
-                   Vragen.laadVraag(5);
-                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNummer).vraag,200, 50);
-               }
+            if (gedaan == 2){
+               if (gevraagt == false && Greenfoot.mouseClicked(this)){    
+
+                   BasicWorld.laadLetters = 3;
+                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag,200, 50);
+                   gevraagt = true;
+                }
+               if ( gevraagt == true && Greenfoot.mouseClicked(this)){
+                   if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
+                        gevraagt = false;
+                        gedaan = 3;
+                        Letter.str.setLength(0);
+                    }
+                    else {
+                        Letter.str.setLength(0);
+                    }
+                }
+            }
+            if (gedaan == 3){
+               if (gevraagt == false && Greenfoot.mouseClicked(this)){    
+                   BasicWorld.laadLetters = 4;
+                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag,200, 50);
+                   gevraagt = true;
+                }
+               if ( gevraagt == true && Greenfoot.mouseClicked(this)){
+                   if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
+                        gevraagt = false;
+                        gedaan = 4;
+                        Letter.str.setLength(0);
+                    }
+                    else {
+                        Letter.str.setLength(0);
+                    }
+                }
+            }
            
            
        }

@@ -15,7 +15,7 @@ public class Hero extends Mover {
     private final double drag;
     
     private String waterTile = ("liquidWater.png");
-    private boolean ignoreGround;
+    public static boolean ignoreGround;
     
     private String dir;
     private int y = 1;
@@ -89,16 +89,12 @@ public class Hero extends Mover {
         
         
         
-        //getWorld().showText("Score is: "+ Integer.toString(score),950, 50);
-        //getWorld().showText(Letter.c ,950, 80);
-        //getWorld().showText(Vraag.antwoord, 950, 110);
         
-        //System.out.println(vragenlijst.get(0).antwoord);
     }
     
     public boolean onGround() {
         if (ignoreGround == true){
-            return false;
+            return  false;
         }
         else {
             Actor under = getOneObjectAtOffset (0 , getImage().getHeight() / 2 , Tile.class);
@@ -136,7 +132,7 @@ public class Hero extends Mover {
                    ignoreGround = true;
                  
                 } else {
-                    velocityY = -15;
+                    velocityY = -16;
                 }
             }
            

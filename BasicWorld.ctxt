@@ -12,6 +12,4 @@ comment4.params=
 comment4.target=void\ initWorld()
 comment5.params=
 comment5.target=void\ endWorld()
-comment6.params=
-comment6.target=void\ lettersMaken()
-numComments=7
+numComments=6

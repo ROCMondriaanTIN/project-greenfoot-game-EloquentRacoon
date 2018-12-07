@@ -54,8 +54,35 @@ public class Door extends Tile
             case 5:
             number = 5;
             break;
-             
             
+            case 6:
+            number = 6;
+            break;
+            
+            case 7:
+            number = 7;
+            break;
+            
+            case 8:
+            number = 8;
+            break;
+            
+            case 9:
+            number = 9;
+            break;
+            
+            case 10:
+            number = 10;
+            break;
+            
+            case 11:
+            number = 11;
+            break;
+            
+            case 12:
+            number = 12;
+            break;
+
         }
         for (Actor door : getIntersectingObjects(Hero.class)) {
             if (door != null && Greenfoot.isKeyDown("space")) {

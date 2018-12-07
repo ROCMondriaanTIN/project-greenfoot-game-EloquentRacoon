@@ -23,7 +23,7 @@ public class MyWorld extends BasicWorld {
     }
     public void act(){
         if (Greenfoot.isKeyDown("space")){
-            LevelManager.getInstance().setLevel(5);
+            LevelManager.getInstance().setLevel(1);
             
         }
         
