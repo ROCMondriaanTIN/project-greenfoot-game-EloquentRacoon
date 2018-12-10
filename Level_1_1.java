@@ -97,17 +97,15 @@ public class Level_1_1 extends BasicWorld
         super.endWorld();
         removeObject(hero);
     }
-    
     public void spawnLetters(){
-        if (laadLetters == 2){
-            addObject(new Letter('b'), 200 , 2125);
-            addObject(new Letter('i'), 300, 2125);
-            addObject(new Letter('k'), 400, 2125);
-            addObject(new Letter('e'), 500, 2125);
+        if (laadLetters == 1){
+            
+            addObject(new Letter('c'), 200 , 905);
+            addObject(new Letter('a'), 300, 905);
+            addObject(new Letter('r'), 400, 905);
             laadLetters = 0;
         }
     }
-        
     @Override
     public void act() {
         ce.update();

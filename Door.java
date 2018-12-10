@@ -8,11 +8,11 @@ import java.util.*;
  */
 public class Door extends Tile
 {
-    int wereld;
+    int level;
     Hero hero;
-    public Door(String image, int width, int heigth, int wereldnummer){
+    public Door(String image, int width, int heigth, int levelnummer){
         super(image, width, heigth);
-        this.wereld = wereldnummer;
+        this.level = levelnummer;
         
         
     }
@@ -30,7 +30,7 @@ public class Door extends Tile
     }    
     public void deur(){
         
-        switch (wereld){
+        switch (level){
             case 0:
             number = 0;
             break;

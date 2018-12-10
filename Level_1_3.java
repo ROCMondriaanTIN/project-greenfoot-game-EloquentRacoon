@@ -96,11 +96,11 @@ public class Level_1_3 extends BasicWorld
         ce.addCollidingMover(hero);
     }
         public void spawnLetters(){
-        if (laadLetters == 4){
-            addObject(new Letter('b'), 200 , 2125);
-            addObject(new Letter('i'), 300, 2125);
-            addObject(new Letter('k'), 400, 2125);
-            addObject(new Letter('e'), 500, 2125);
+        if (laadLetters == 3){
+            addObject(new Letter('b'), 200, 825);
+            addObject(new Letter('o'), 300, 825);
+            addObject(new Letter('a'), 400, 825);
+            addObject(new Letter('t'), 500, 825);
             laadLetters = 0;
         }
     }

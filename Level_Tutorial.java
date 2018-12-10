@@ -82,19 +82,9 @@ public class Level_Tutorial extends BasicWorld
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
     }
-        public void spawnLetters(){
-        if (laadLetters == 1){
-            
-            addObject(new Letter('c'), 200 , 905);
-            addObject(new Letter('a'), 300, 905);
-            addObject(new Letter('r'), 400, 905);
-            laadLetters = 0;
-        }
-    }
     @Override
     public void act() {
         ce.update();
         
-        spawnLetters();
     }
 }

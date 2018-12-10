@@ -21,7 +21,7 @@ public class Letter extends Mover
             
             Schrijven(); 
             
-            getWorld().showText(str.toString(),100, 100);
+            
             getWorld().removeObject(this);    
             
                 
@@ -46,8 +46,27 @@ public class Letter extends Mover
     }
     public void Schrijven(){
           switch(letter){
-                   case 0: str.setLength(0);
+                   case '0': str.append("0");
                    break;
+                   case '1': str.append("1");
+                   break;
+                   case '2': str.append("2");
+                   break;
+                   case '3': str.append("3");
+                   break;
+                   case '4': str.append("4");
+                   break;
+                   case '5': str.append("5");
+                   break;
+                   case '6': str.append("6");
+                   break;
+                   case '7': str.append("7");
+                   break;
+                   case '8': str.append("8");
+                   break;
+                   case '9': str.append("9");
+                   break;
+                   
                    case 'a': str.append("a");
                    break;
                    case 'b': str.append("b");

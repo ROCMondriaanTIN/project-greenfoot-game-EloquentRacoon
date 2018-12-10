@@ -81,12 +81,13 @@ public class Hero extends Mover {
             }
         }
         
-        if (Greenfoot.isKeyDown("p")){
-            Letter.str.setLength(0);
+        if (Greenfoot.isKeyDown("escape")){
+                Greenfoot.setWorld(new MyWorld());
         }
-        
-        
-        
+        if (Liam.update == true){
+            getWorld().showText(Letter.str.toString(),100, 70);   
+            getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+           }
         
         
         

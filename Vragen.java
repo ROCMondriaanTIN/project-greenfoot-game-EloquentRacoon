@@ -9,9 +9,12 @@ import java.util.*;
 public class Vragen extends Actor
 {
     public static ArrayList<Vraag> vragenlijst_1 = new ArrayList<Vraag>();
-    boolean firstact = true;
+    public static ArrayList<Vraag> vragenlijst_2 = new ArrayList<Vraag>();
     
-    static char y;
+    
+    
+    static int vraagNumber;
+   
     
     
     public Vragen(){
@@ -20,6 +23,12 @@ public class Vragen extends Actor
         vragenlijst_1.add(new Vraag("Wat is boot in het Engels?", "boat"));
         vragenlijst_1.add(new Vraag("Wat is trein in het Engels?", "train")); 
         vragenlijst_1.add(new Vraag("Wat is vliegtuig in het Engels?", "airplane"));
+        
+        vragenlijst_2.add(new Vraag("Wat is rood in het Engels?", "red"));
+        vragenlijst_2.add(new Vraag("",""));
+        vragenlijst_2.add(new Vraag("",""));
+        vragenlijst_2.add(new Vraag("",""));
+        vragenlijst_2.add(new Vraag("",""));
     }
 
     /**
@@ -28,64 +37,15 @@ public class Vragen extends Actor
      */
     public void act() 
     {
-        
+         
     }    
     
     public static Vraag laadVraag(int vraagNummer){
-        
-            Liam.vraagNumber = vraagNummer;
-        
-            switch(vraagNummer){
-                case 0:
-                System.out.println(vragenlijst_1.get(vraagNummer).antwoord);
-                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
-                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        //System.out.println(y);
-                    }   
-                    break;
-                
-                case 1:
-                System.out.println(vragenlijst_1.get(vraagNummer).antwoord);
-                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
-                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        
-                    } 
-                    break;
-                    
-                case 2:
-                System.out.println(vragenlijst_1.get(vraagNummer).antwoord);
-                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
-                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        System.out.println(y);
-                    } 
-                    break;
-                    
-                case 3:
-                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
-                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        System.out.println(y);
-                    } 
-                    break;
-                    
-                case 4:
-                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
-                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        System.out.println(y);
-                    } 
-                    break;
-                
-                case 5:
-                    for (int letterNummer =0; letterNummer < vragenlijst_1.get(vraagNummer).antwoord.length(); letterNummer ++){
-                        char y = vragenlijst_1.get(vraagNummer).antwoord.charAt(letterNummer);
-                        System.out.println(y);
-                    } 
-                    break;
-                    
-                default:
-                    System.out.println("er is geen vraag"); 
-                    
-            }
-            return vragenlijst_1.get(vraagNummer);
+            // System.out.println(vraagNummer);
+            vraagNumber = vraagNummer;
+            return vragenlijst_1.get(vraagNummer); 
+            
+           
     }
     
     

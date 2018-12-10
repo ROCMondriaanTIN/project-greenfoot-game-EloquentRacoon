@@ -557,19 +557,19 @@ public class TileFactory{
          
          
          case 90:
-         tile = new Lava("liquidLava.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Water("liquidLava.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;
          break;
          
          
          case 91:
-         tile = new Lava("liquidLavaTop.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Water("liquidLavaTop.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;
          break;
          
          
          case 92:
-         tile = new Lava("liquidLavaTop_mid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Tile("liquidLavaTop_mid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;
          break;
          
@@ -587,7 +587,7 @@ public class TileFactory{
          
          
          case 95:
-         tile = new Water("liquidWaterTop_mid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+         tile = new Tile("liquidWaterTop_mid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
          tile.isSolid = false;        
          break;
          
@@ -1658,6 +1658,28 @@ public class TileFactory{
          tile = new Door("door_openMid.png",TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT,12);
          tile.isSolid = false;
          break;   
+         
+         
+         
+         case 300:
+         tile = new Wereld("door_openMid.png",TileEngine.TILE_WIDTH*2, TileEngine.TILE_HEIGHT,0);
+         tile.isSolid = false;
+         break;
+         
+         case 301:
+         tile = new Wereld("door_openMid.png",TileEngine.TILE_WIDTH*2, TileEngine.TILE_HEIGHT,1);
+         tile.isSolid = false;
+         break;
+         
+         case 302:
+         tile = new Wereld("door_openMid.png",TileEngine.TILE_WIDTH*2, TileEngine.TILE_HEIGHT,2);
+         tile.isSolid = false;
+         break;
+         
+         case 303:
+         tile = new Wereld("door_openMid.png",TileEngine.TILE_WIDTH*2, TileEngine.TILE_HEIGHT,3);
+         tile.isSolid = false;
+         break;
  
          default:
          tile = new Tile("grassMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);

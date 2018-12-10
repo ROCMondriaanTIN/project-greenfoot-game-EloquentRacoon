@@ -14,8 +14,9 @@ public class Liam extends Mover
      */
     static int gedaan = 0;
     boolean gevraagt;
+    static boolean update;
     
-    static int vraagNumber;
+    
     
     
     public Liam(){
@@ -40,50 +41,53 @@ public class Liam extends Mover
            if(gedaan == 0)
            {
                if (gevraagt == false && Greenfoot.mouseClicked(this)){               
-                   
+                   Vragen.laadVraag(0);
                    BasicWorld.laadLetters = 1;
-                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag, 200, 50);
+                   update = true;
                    gevraagt = true;
                }
                if (gevraagt == true && Greenfoot.mouseClicked(this)){ 
-                    if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
+                    if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                         gevraagt = false;
                         gedaan = 1;
                         Letter.str.setLength(0);
                         
                     }
                     else{
+                        
                         Letter.str.setLength(0);
-
+                        BasicWorld.laadLetters = 1; 
                     }
                 }
            }
            if (gedaan == 1){
                if (gevraagt == false && Greenfoot.mouseClicked(this)){    
+                   Vragen.laadVraag(1);
                    BasicWorld.laadLetters = 2;
-                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag,200, 50);
+                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
                    gevraagt = true;
                 }
                if ( gevraagt == true && Greenfoot.mouseClicked(this)){
-                   if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
+                   if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                         gevraagt = false;
                         gedaan = 2;
                         Letter.str.setLength(0);
                     }
                     else {
                         Letter.str.setLength(0);
+                        BasicWorld.laadLetters = 2;
                     }
                 }
             }
             if (gedaan == 2){
                if (gevraagt == false && Greenfoot.mouseClicked(this)){    
-
+                   Vragen.laadVraag(2);
                    BasicWorld.laadLetters = 3;
-                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag,200, 50);
+                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
                    gevraagt = true;
                 }
                if ( gevraagt == true && Greenfoot.mouseClicked(this)){
-                   if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
+                   if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                         gevraagt = false;
                         gedaan = 3;
                         Letter.str.setLength(0);
@@ -95,12 +99,13 @@ public class Liam extends Mover
             }
             if (gedaan == 3){
                if (gevraagt == false && Greenfoot.mouseClicked(this)){    
+                   Vragen.laadVraag(3);
                    BasicWorld.laadLetters = 4;
-                   getWorld().showText(Vragen.vragenlijst_1.get(vraagNumber).vraag,200, 50);
+                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
                    gevraagt = true;
                 }
                if ( gevraagt == true && Greenfoot.mouseClicked(this)){
-                   if (Vragen.vragenlijst_1.get(vraagNumber).antwoord.equals(Letter.str.toString())){
+                   if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                         gevraagt = false;
                         gedaan = 4;
                         Letter.str.setLength(0);
@@ -110,10 +115,28 @@ public class Liam extends Mover
                     }
                 }
             }
-           
+            if (gedaan == 4){
+               if (gevraagt == false && Greenfoot.mouseClicked(this)){    
+                   Vragen.laadVraag(4);
+                   BasicWorld.laadLetters = 5;
+                   getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+                   gevraagt = true;
+                }
+               if ( gevraagt == true && Greenfoot.mouseClicked(this)){
+                   if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
+                        gevraagt = false;
+                        gedaan = 5;
+                        Letter.str.setLength(0);
+                    }
+                    else {
+                        Letter.str.setLength(0);
+                    }
+                }
+            }
            
        }
     }
+    
     
     
    
