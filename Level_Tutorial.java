@@ -49,6 +49,9 @@ public class Level_Tutorial extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = false;
+        if (!Level1.isPlaying()){
+            Level1.play();
+        }
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);

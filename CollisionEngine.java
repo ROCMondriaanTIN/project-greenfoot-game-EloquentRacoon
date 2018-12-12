@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class CollisionEngine {
 
-    public static final boolean DEBUG = false;
+    public static final boolean DEBUG = true;
     private final Camera camera;
     private final TileEngine tileEngine;
     private final List<Mover> collidingActors;

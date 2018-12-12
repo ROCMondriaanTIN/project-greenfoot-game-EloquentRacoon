@@ -64,6 +64,9 @@ public class Level_2_1 extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = false;
+        if (!Level2.isPlaying()){
+            Level2.play();
+        }
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
@@ -105,9 +108,9 @@ public class Level_2_1 extends BasicWorld
     
     public void spawnLetters(){
         if (laadLetters == 1){
-            addObject(new Letter('r'), 300, 2125);
-            addObject(new Letter('e'), 400, 2125);
-            addObject(new Letter('d'), 500, 2125);
+            addObject(new Letter('r'), 2500, 1925);
+            addObject(new Letter('e'), 550, 625);
+            addObject(new Letter('d'), 2700, 1025);
             
             laadLetters = 0;
         }

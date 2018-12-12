@@ -65,21 +65,6 @@ public class Level_2_Main extends BasicWorld
         
         
         Vragen v = new Vragen();
-        // if (Liam.gedaan == 0){
-            // Vraag Level_1_vraag1 = v.laadVraag(0);
-        // }
-        // if (Liam.gedaan == 1){
-            // Vraag Level_1_vraag2 = v.laadVraag(1);
-        // }
-        // if (Liam.gedaan == 2){
-            // Vraag Level_1_vraag3 = v.laadVraag(2);
-        // }
-        // if (Liam.gedaan == 3){
-            // Vraag Level_1_vraag4 = v.laadVraag(3);
-        // }
-        // if (Liam.gedaan == 4){
-            // Vraag Level_1_vraag5 = v.laadVraag(4);
-        // }
         
         
     }
@@ -87,6 +72,9 @@ public class Level_2_Main extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = true;
+        if (!Level2.isPlaying()){
+            Level2.play();
+        }
         if (run == true){
             run = false;
                 for(Actor hero: getObjects(Hero.class)) {

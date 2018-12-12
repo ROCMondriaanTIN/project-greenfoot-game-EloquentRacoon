@@ -39,7 +39,12 @@ public class MyWorld extends BasicWorld {
             LevelManager.getInstance().setLevel(1);
             
         }
-        
+        if (Level2.isPlaying()){
+            Level2.stop();
+        }
+        if (Level1.isPlaying()){
+            Level1.stop();
+        }
         
         
     }

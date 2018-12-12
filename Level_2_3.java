@@ -61,6 +61,9 @@ public class Level_2_3 extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = false;
+        if (!Level2.isPlaying()){
+            Level2.play();
+        }
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
@@ -98,12 +101,12 @@ public class Level_2_3 extends BasicWorld
     }
         public void spawnLetters(){
         if (laadLetters == 3){
-            addObject(new Letter('p'), 200 , 2125);
-            addObject(new Letter('u'), 300, 2125);
-            addObject(new Letter('r'), 400, 2125);
-            addObject(new Letter('p'), 500, 2125);
-            addObject(new Letter('l'), 600, 2125);
-            addObject(new Letter('e'), 700, 2125);
+            addObject(new Letter('p'), 200, 825);
+            addObject(new Letter('u'), 2850, 1625);
+            addObject(new Letter('r'), 1900, 750);
+            addObject(new Letter('p'), 1850, 1600);
+            addObject(new Letter('l'), 1150, 1625);
+            addObject(new Letter('e'), 3000, 1000);
             laadLetters = 0;
         }
     }

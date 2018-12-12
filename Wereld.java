@@ -37,6 +37,7 @@ public class Wereld extends Tile
                 
                 LevelManager.getInstance().setLevel(0);
                 firstAct= false;
+                Greenfoot.playSound("Level1.mp3");
             }
         else{
             levelSelect();
@@ -86,6 +87,11 @@ public class Wereld extends Tile
         }
         if (Greenfoot.mouseClicked(this)){
             LevelManager.getInstance().setLevel(number);
+            if (number == 1){
+                //Greenfoot.playSound("Level1.mp3");
+            } else if (number == 7){
+                //Greenfoot.playSound("Level2.mp3");
+            }
         }
     }
 }

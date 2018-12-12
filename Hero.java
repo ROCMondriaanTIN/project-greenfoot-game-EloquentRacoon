@@ -100,7 +100,7 @@ public class Hero extends Mover {
             }
            }
         if (isAtEdge() && BasicWorld.Level == false){
-            
+            Greenfoot.playSound("hurt.mp3");
             Greenfoot.setWorld(new MyWorld());
         }
         

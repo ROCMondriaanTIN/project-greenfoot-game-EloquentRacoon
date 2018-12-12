@@ -14,7 +14,10 @@ public class BasicWorld extends World
     int[][] map;
     static boolean initialized = false;
     static int laadLetters = 0;
-    static boolean Level;
+    static boolean Level = false;
+    public boolean isPlaying;
+    public GreenfootSound Level1 = new GreenfootSound("Level1.mp3");
+    public GreenfootSound Level2 = new GreenfootSound("Level2.mp3");
     
     
     /**

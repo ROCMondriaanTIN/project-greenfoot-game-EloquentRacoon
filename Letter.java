@@ -18,7 +18,7 @@ public class Letter extends Mover
         applyVelocity();
         
         if (Greenfoot.mouseClicked(this)){
-            
+            Greenfoot.playSound("letter.mp3");
             Schrijven(); 
             
             
