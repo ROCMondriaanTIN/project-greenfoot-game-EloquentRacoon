@@ -17,7 +17,9 @@ public class Level_1_1 extends BasicWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
          super(); 
-        this.setBackground("bg.png");
+        this.setBackground("background1.png");
+       
+        
 
         
         
@@ -60,6 +62,7 @@ public class Level_1_1 extends BasicWorld
     
     public void startWorld() {
         super.startWorld();
+        Level = false;
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
@@ -100,9 +103,9 @@ public class Level_1_1 extends BasicWorld
     public void spawnLetters(){
         if (laadLetters == 1){
             
-            addObject(new Letter('c'), 200 , 905);
-            addObject(new Letter('a'), 300, 905);
-            addObject(new Letter('r'), 400, 905);
+            addObject(new Letter('c'), 200, 1005);
+            addObject(new Letter('a'), 3270,1650);
+            addObject(new Letter('r'), 2200, 400);
             laadLetters = 0;
         }
     }

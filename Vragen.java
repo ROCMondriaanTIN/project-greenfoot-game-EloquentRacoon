@@ -18,15 +18,17 @@ public class Vragen extends Actor
     
     
     public Vragen(){
+        vragenlijst_1.add(new Vraag("Goedzo!, volgende vraag", ""));
         vragenlijst_1.add(new Vraag("Wat is auto in het Engels?", "car"));
         vragenlijst_1.add(new Vraag("Wat is fiets in het Engels?", "bike"));
         vragenlijst_1.add(new Vraag("Wat is boot in het Engels?", "boat"));
         vragenlijst_1.add(new Vraag("Wat is trein in het Engels?", "train")); 
         vragenlijst_1.add(new Vraag("Wat is vliegtuig in het Engels?", "airplane"));
         
+        vragenlijst_2.add(new Vraag("Goedzo!, volgende vraag", ""));
         vragenlijst_2.add(new Vraag("Wat is rood in het Engels?", "red"));
-        vragenlijst_2.add(new Vraag("",""));
-        vragenlijst_2.add(new Vraag("",""));
+        vragenlijst_2.add(new Vraag("Wat is groen in het Engels?","green"));
+        vragenlijst_2.add(new Vraag("Wat is paars in het Engels?","purple"));
         vragenlijst_2.add(new Vraag("",""));
         vragenlijst_2.add(new Vraag("",""));
     }
@@ -43,8 +45,14 @@ public class Vragen extends Actor
     public static Vraag laadVraag(int vraagNummer){
             // System.out.println(vraagNummer);
             vraagNumber = vraagNummer;
-            return vragenlijst_1.get(vraagNummer); 
-            
+            if (Wereld.world == 1){
+                return vragenlijst_1.get(vraagNumber); 
+            }
+            else if (Wereld.world == 2){
+                return vragenlijst_2.get(vraagNumber); 
+            }
+            return  vragenlijst_1.get(vraagNumber);
+             
            
     }
     

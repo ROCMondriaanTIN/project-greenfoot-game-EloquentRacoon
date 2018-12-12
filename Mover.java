@@ -102,4 +102,5 @@ public class Mover extends Actor {
                 + "velocityX: " + velocityX + "\n"
                 + "velocityY: " + velocityY + "\n";
     }
+    
 }

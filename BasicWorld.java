@@ -14,7 +14,8 @@ public class BasicWorld extends World
     int[][] map;
     static boolean initialized = false;
     static int laadLetters = 0;
-    static int world;
+    static boolean Level;
+    
     
     /**
      * Constructor for objects of class BasicWorld.
@@ -64,6 +65,8 @@ public class BasicWorld extends World
         te.clearTilesWorld();
         
     }
+    
+    
     
     
 }

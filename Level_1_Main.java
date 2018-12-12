@@ -13,6 +13,8 @@ public class Level_1_Main extends BasicWorld
     Hero hero;
     Liam liam;
     private boolean run = true;
+    boolean yeet = true;
+    
     /**
      * Constructor for objects of class LevelSelect.
      * 
@@ -21,7 +23,7 @@ public class Level_1_Main extends BasicWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
-        this.setBackground("bg.png");
+        this.setBackground("background1.png");
         
 
         int[][] map = {
@@ -32,7 +34,7 @@ public class Level_1_Main extends BasicWorld
         },{-1,-1,-1,-1,-1,-1,-1,-1,185,186,-1,-1,-1,-1,-1,-1,187,186,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,82,82,82,82,82,77,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,186,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
         },{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,187,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,65,78,82,77,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,186,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
         },{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,187,185,186,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,82,82,82,76,65,65,65,65,65,65,65,65,78,82,77,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,61,-1,-1,-1,-1,-1,-1,-1,-1
-        },{186,186,186,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,65,65,65,65,65,65,65,65,65,65,78,82,82,82,82,82,82,82,69,-1,-1,-1,-1,-1,186,186,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,268,-1,-1,-1,-1,-1,-1,-1,-1
+        },{186,186,186,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,65,65,65,65,65,65,65,65,65,65,78,82,82,82,82,82,82,82,69,-1,-1,-1,-1,-1,186,187,187,-1,-1,-1,-1,127,-1,-1,-1,-1,-1,268,-1,-1,-1,-1,-1,-1,-1,-1
         },{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,82,82,82,82,82,82,82,82,82,82,82,82,82,82,82
         },{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65
         },{-1,-1,-1,75,82,82,82,77,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,-1,65,65,65,65,-1,65,65,65,65,65,-1,65,65,65,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,75,76,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65
@@ -63,34 +65,34 @@ public class Level_1_Main extends BasicWorld
         
         setMap(map);
         initWorld();
-        world = 1;
         
-        addObject(new Liam() , 80 , 1845);
+        
+        addObject(new Liam() , 80 , 1945);
         
         
         Vragen v = new Vragen();
-        if (Liam.gedaan == 0){
-            Vraag Level_1_vraag1 = v.laadVraag(0);
-        }
-        if (Liam.gedaan == 1){
-            Vraag Level_1_vraag2 = v.laadVraag(1);
-        }
-        if (Liam.gedaan == 2){
-            Vraag Level_1_vraag3 = v.laadVraag(2);
-        }
-        if (Liam.gedaan == 3){
-            Vraag Level_1_vraag4 = v.laadVraag(3);
-        }
-        if (Liam.gedaan == 4){
-            Vraag Level_1_vraag5 = v.laadVraag(4);
-        }
+        // if (Liam.vragenWereldEenGedaan == 0){
+            // Vraag Level_1_vraag1 = v.laadVraag(0);
+        // }
+        // if (Liam.vragenWereldEenGedaan == 1){
+            // Vraag Level_1_vraag2 = v.laadVraag(1);
+        // }
+        // if (Liam.vragenWereldEenGedaan == 2){
+            // Vraag Level_1_vraag3 = v.laadVraag(2);
+        // }
+        // if (Liam.vragenWereldEenGedaan == 3){
+            // Vraag Level_1_vraag4 = v.laadVraag(3);
+        // }
+        // if (Liam.vragenWereldEenGedaan == 4){
+            // Vraag Level_1_vraag5 = v.laadVraag(4);
+        // }
 
-    
+        
     }
     
     public void startWorld() {
         super.startWorld();
-        
+        Level = true;
         if (run == true){
             run = false;
                 for(Actor hero: getObjects(Hero.class)) {
@@ -138,8 +140,10 @@ public class Level_1_Main extends BasicWorld
     @Override
     public void act() {
         ce.update();
-        if (Greenfoot.isKeyDown("2")){
-            LevelManager.getInstance().setLevel(7);
+        if (Greenfoot.isKeyDown("2") && yeet == true){
+            Letter.str.append("car");
+            yeet = false;
+            
         }
         if (Greenfoot.isKeyDown("3")){
             LevelManager.getInstance().setLevel(2);

@@ -20,7 +20,7 @@ public class Level_2_Main extends BasicWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
-        this.setBackground("grot.png");
+        this.setBackground("background3.png");
         
 
         int[][] map = {
@@ -64,7 +64,7 @@ public class Level_2_Main extends BasicWorld
         addObject(new Liam() , 100 , 1975);
         
         
-        // Vragen v = new Vragen();
+        Vragen v = new Vragen();
         // if (Liam.gedaan == 0){
             // Vraag Level_1_vraag1 = v.laadVraag(0);
         // }
@@ -80,13 +80,13 @@ public class Level_2_Main extends BasicWorld
         // if (Liam.gedaan == 4){
             // Vraag Level_1_vraag5 = v.laadVraag(4);
         // }
-    
+        
         
     }
     
     public void startWorld() {
         super.startWorld();
-        
+        Level = true;
         if (run == true){
             run = false;
                 for(Actor hero: getObjects(Hero.class)) {

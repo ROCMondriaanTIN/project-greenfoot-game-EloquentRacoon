@@ -17,6 +17,7 @@ public class Door extends Tile
         
     }
     private int number;
+    public static int nummer;
     
 
     /**
@@ -33,6 +34,7 @@ public class Door extends Tile
         switch (level){
             case 0:
             number = 0;
+            
             break;
             
             case 1:

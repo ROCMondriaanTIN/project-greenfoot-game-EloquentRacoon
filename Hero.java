@@ -80,15 +80,29 @@ public class Hero extends Mover {
                 break;
             }
         }
+        for (Actor damage : getIntersectingObjects(Damaging.class)) {
+            if (damage != null) {
+                Greenfoot.setWorld(new MyWorld());
+                break;
+            }
+        }
         
         if (Greenfoot.isKeyDown("escape")){
                 Greenfoot.setWorld(new MyWorld());
         }
         if (Liam.update == true){
-            getWorld().showText(Letter.str.toString(),100, 70);   
-            getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+            getWorld().showText(Letter.str.toString(),100, 70); 
+            if (Wereld.world == 1){
+                getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+            }
+            else if (Wereld.world == 2){
+                getWorld().showText(Vragen.vragenlijst_2.get(Vragen.vraagNumber).vraag,200, 50);
+            }
            }
-        
+        if (isAtEdge() && BasicWorld.Level == false){
+            
+            Greenfoot.setWorld(new MyWorld());
+        }
         
         
     }
@@ -168,6 +182,9 @@ public class Hero extends Mover {
             
             
         }
+        
+        
+        
     }
     
     public void animationRight() {
@@ -208,6 +225,8 @@ public class Hero extends Mover {
          if(hero != null) {
                     getWorld().addObject(hero , 30 ,30 );
                  }
+                 
+                 
     }
     
     public int getWidth() {

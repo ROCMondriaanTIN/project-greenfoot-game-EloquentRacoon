@@ -16,7 +16,9 @@ public class Level_1_5 extends BasicWorld
     public Level_1_5()
     {
          super();
-        this.setBackground("bg.png");
+        this.setBackground("background2.png");
+        
+        
 
         int [][] map = {
         {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
@@ -91,6 +93,7 @@ public class Level_1_5 extends BasicWorld
     
     public void startWorld() {
         super.startWorld();
+        Level = false;
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
@@ -128,10 +131,14 @@ public class Level_1_5 extends BasicWorld
     }
         public void spawnLetters(){
         if (laadLetters == 5){
-            addObject(new Letter('b'), 200 , 2125);
-            addObject(new Letter('i'), 300, 2125);
-            addObject(new Letter('k'), 400, 2125);
-            addObject(new Letter('e'), 500, 2125);
+            addObject(new Letter('a'), 200, 4300);
+            addObject(new Letter('i'), 300, 4300);
+            addObject(new Letter('r'), 400, 4300);
+            addObject(new Letter('p'), 500, 4300);
+            addObject(new Letter('l'), 600, 4300);
+            addObject(new Letter('a'), 700, 4300);
+            addObject(new Letter('n'), 800, 4300);
+            addObject(new Letter('e'), 900, 4300);
             laadLetters = 0;
         }
     }

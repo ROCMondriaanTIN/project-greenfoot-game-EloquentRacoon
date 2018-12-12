@@ -16,8 +16,8 @@ public class Level_1_4 extends BasicWorld
     public Level_1_4()
     {
           super();
-        this.setBackground("bg.png");
-
+        this.setBackground("background2.png");
+        
         int [][] map = {
         {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,185,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
         },{-1,-1,-1,-1,-1,185,185,185,185,185,185,185,185,185,185,185,185,185,185,185,185,185,185,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
@@ -59,6 +59,7 @@ public class Level_1_4 extends BasicWorld
     
     public void startWorld() {
         super.startWorld();
+        Level = false;
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
@@ -97,10 +98,11 @@ public class Level_1_4 extends BasicWorld
         
     public void spawnLetters(){
         if (laadLetters == 4){
-            addObject(new Letter('a'), 200 , 2125);
-            addObject(new Letter('i'), 300, 2125);
-            addObject(new Letter('r'), 400, 2125);
-            addObject(new Letter('e'), 500, 2125);
+            addObject(new Letter('t'), 200 , 2025);
+            addObject(new Letter('r'), 300 , 2025);
+            addObject(new Letter('a'), 400 , 2025);
+            addObject(new Letter('i'), 500 , 2025);
+            addObject(new Letter('n'), 600 , 2025);
             laadLetters = 0;
         }
     }

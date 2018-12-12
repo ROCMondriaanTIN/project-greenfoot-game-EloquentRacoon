@@ -16,8 +16,8 @@ public class Level_1_2 extends BasicWorld
     public Level_1_2()
     {
           super();
-        this.setBackground("bg.png");
-
+        this.setBackground("background1.png");
+        
         int [][] map = {
         {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,65,65,65,65,65,65,65,65,65,65,65,65,65,65
         },{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,65,65,65,65,65,65,65,65,65,65,65,65,65
@@ -43,6 +43,7 @@ public class Level_1_2 extends BasicWorld
     
     public void startWorld() {
         super.startWorld();
+        Level = false;
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
