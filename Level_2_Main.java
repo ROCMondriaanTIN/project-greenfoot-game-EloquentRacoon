@@ -72,9 +72,7 @@ public class Level_2_Main extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = true;
-        if (!Level2.isPlaying()){
-            Level2.play();
-        }
+        
         if (run == true){
             run = false;
                 for(Actor hero: getObjects(Hero.class)) {
@@ -122,7 +120,12 @@ public class Level_2_Main extends BasicWorld
     @Override
     public void act() {
         ce.update();
-        
-        
+        if (BasicWorld.Level1.isPlaying() == true){
+            BasicWorld.Level1.stop();
+
+        }
+        if (BasicWorld.Level2.isPlaying() == false){
+            BasicWorld.Level2.play();
+        }
     }
 }

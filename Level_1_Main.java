@@ -13,7 +13,7 @@ public class Level_1_Main extends BasicWorld
     Hero hero;
     Liam liam;
     private boolean run = true;
-    boolean yeet = true;
+    
     
     /**
      * Constructor for objects of class LevelSelect.
@@ -78,14 +78,12 @@ public class Level_1_Main extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = true;
-        if (!Level1.isPlaying()){
-            Level1.play();
-        }
+        isPlaying = true;
         
         
         if (run == true){
             run = false;
-                for(Actor hero: getObjects(Hero.class)) {
+            for(Actor hero: getObjects(Hero.class)) {
                 if(hero != null) {
                     removeObject(hero);
                 }
@@ -131,14 +129,13 @@ public class Level_1_Main extends BasicWorld
     public void act() {
         ce.update();
         
-        if (Greenfoot.isKeyDown("x")){
-            laadLetters = 5 ; 
-            
-            
+        if (BasicWorld.Level1.isPlaying() == false){
+            BasicWorld.Level1.play();
+
         }
-        if (Greenfoot.isKeyDown("4")){
-            LevelManager.getInstance().setLevel(7);
-            Greenfoot.playSound("Level2.mp3");
+        if (BasicWorld.Level2.isPlaying() == true){
+            BasicWorld.Level2.stop();
+
         }
     }
     

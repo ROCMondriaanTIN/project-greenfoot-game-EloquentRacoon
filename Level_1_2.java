@@ -44,9 +44,7 @@ public class Level_1_2 extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = false;
-        if (!Level1.isPlaying()){
-            Level1.play();
-        }
+        isPlaying = true;
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
@@ -95,6 +93,14 @@ public class Level_1_2 extends BasicWorld
     public void act() {
         ce.update();
         spawnLetters();
+        if (BasicWorld.Level1.isPlaying() == false){
+            BasicWorld.Level1.play();
+
+        }
+        if (BasicWorld.Level2.isPlaying() == true){
+            BasicWorld.Level2.stop();
+
+        }
     }
     
 }

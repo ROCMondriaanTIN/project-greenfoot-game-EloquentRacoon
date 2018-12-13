@@ -20,6 +20,8 @@ public class Liam extends Mover
     
     
     
+    
+    
     public Liam(){
         super();
         
@@ -37,7 +39,10 @@ public class Liam extends Mover
         
     }    
     
+    
+    
     public void vraagstelen(){
+        
         for (Actor hero : getObjectsInRange(200,Hero.class)) 
        {
            switch(Wereld.world){
@@ -49,8 +54,11 @@ public class Liam extends Mover
                        if (gevraagt == false){               
                            Vragen.laadVraag(1);
                            BasicWorld.laadLetters = 1;
+                           BasicWorld.liamVragen.play();
+                           
                            update = true;       //zorgt ervoor dat de vraag in de wereld constand word geupdate, anders zie je niet de string in iedere wereld
                            gevraagt = true;     // checkt of er een vraag is gestelt
+                           
                        }
                        if (gevraagt == true && Greenfoot.mouseClicked(this)){ 
                             if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
@@ -59,10 +67,15 @@ public class Liam extends Mover
                                 vragenWereldEenGedaan = 1;  //zegt hoeveel vragen er gedaan zijn in de gegeven wereld
                                 Letter.str.setLength(0);    //reset je antwoord naar een lege stringbuffer
                                 Vragen.laadVraag(0);
+                                BasicWorld.liamGoed.play();
                             }
                             else{
                                 
-                                Letter.str.setLength(0);    
+                                Letter.str.setLength(0); 
+                                if (BasicWorld.liamVragen.isPlaying() == false){
+                                    BasicWorld.liamFout.play();
+                                }
+                                
                                 BasicWorld.laadLetters = 1; //laad opnieuw de letters want het antwoord is fout
                             }
                             break;
@@ -75,19 +88,23 @@ public class Liam extends Mover
                         if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                                Vragen.laadVraag(2);
                                BasicWorld.laadLetters = 2;
-                               getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+                               BasicWorld.liamVragen.play();
+                               
                                gevraagt = true;
                         }
                         if (gevraagt == true && Greenfoot.mouseClicked(this)){
                                if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                                     gevraagt = false;
                                     vragenWereldEenGedaan = 2;
+                                    BasicWorld.liamGoed.play();
                                     Letter.str.setLength(0);
                                     Vragen.laadVraag(0);
                                 }
                                 else {
                                     Letter.str.setLength(0);
+                                    BasicWorld.liamFout.play();
                                     BasicWorld.laadLetters = 2;
+                                    
                                 }
                         }
                     
@@ -97,19 +114,23 @@ public class Liam extends Mover
                        if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                            Vragen.laadVraag(3);
                            BasicWorld.laadLetters = 3;
-                           getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+                           BasicWorld.liamVragen.play();
+                           
                            gevraagt = true;
                        }
                        if (gevraagt == true && Greenfoot.mouseClicked(this)){
                            if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                                 gevraagt = false;
                                 vragenWereldEenGedaan = 3;
+                                BasicWorld.liamGoed.play();
                                 Letter.str.setLength(0);
                                 Vragen.laadVraag(0);
                             }
                             else {
                                 Letter.str.setLength(0);
+                                BasicWorld.liamFout.play();
                                 BasicWorld.laadLetters = 3;
+                                
                             }
                        }
                     
@@ -120,18 +141,21 @@ public class Liam extends Mover
                        if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                            Vragen.laadVraag(4);
                            BasicWorld.laadLetters = 4;
-                           getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+                           BasicWorld.liamVragen.play();
+                           
                            gevraagt = true;
                        }
                        if ( gevraagt == true && Greenfoot.mouseClicked(this)){
                            if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                                 gevraagt = false;
                                 vragenWereldEenGedaan = 4;
+                                BasicWorld.liamGoed.play();
                                 Letter.str.setLength(0);
                                 Vragen.laadVraag(0);
                             }
                             else {
                                 Letter.str.setLength(0);
+                                BasicWorld.liamFout.play();
                                 BasicWorld.laadLetters = 4;
                             }
                        }
@@ -143,12 +167,13 @@ public class Liam extends Mover
                        if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                            Vragen.laadVraag(5);
                            BasicWorld.laadLetters = 5;
-                           getWorld().showText(Vragen.vragenlijst_1.get(Vragen.vraagNumber).vraag,200, 50);
+                           BasicWorld.liamVragen.play();
                            gevraagt = true;
                         }
                        if ( gevraagt == true && Greenfoot.mouseClicked(this)){
                            if (Vragen.vragenlijst_1.get(Vragen.vraagNumber).antwoord.equals(Letter.str.toString())){
                                 gevraagt = false;
+                                BasicWorld.liamGoed.play();
                                 vragenWereldEenGedaan = 0;
                                 Letter.str.setLength(0);
                                 Vragen.laadVraag(0);
@@ -157,6 +182,7 @@ public class Liam extends Mover
                             }
                             else {
                                 Letter.str.setLength(0);
+                                BasicWorld.liamFout.play();
                                 BasicWorld.laadLetters = 5;
                             }
                         }
@@ -170,6 +196,7 @@ public class Liam extends Mover
                    if (gevraagt == false && Greenfoot.mouseClicked(this)){               
                        Vragen.laadVraag(1);
                        BasicWorld.laadLetters = 1;
+                       BasicWorld.liamVragen.play();
                        update = true;
                        gevraagt = true;
                    }
@@ -183,7 +210,10 @@ public class Liam extends Mover
                         else{
                             
                             Letter.str.setLength(0);
-                            BasicWorld.laadLetters = 1; 
+                            if (BasicWorld.liamVragen.isPlaying() == false){
+                                    BasicWorld.liamFout.play();
+                                }
+                            BasicWorld.laadLetters = 1;
                         }
                    }
                    break;
@@ -192,6 +222,7 @@ public class Liam extends Mover
                    if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                        Vragen.laadVraag(2);
                        BasicWorld.laadLetters = 2;
+                       BasicWorld.liamVragen.play();
                        gevraagt = true;
                    }
                    if (gevraagt == true && Greenfoot.mouseClicked(this)){
@@ -199,10 +230,12 @@ public class Liam extends Mover
                             gevraagt = false;
                             vragenWereldTweeGedaan = 2;
                             Letter.str.setLength(0);
+                            BasicWorld.liamGoed.play();
                             Vragen.laadVraag(0);
                         }
                         else {
                             Letter.str.setLength(0);
+                            BasicWorld.liamFout.play();
                             BasicWorld.laadLetters = 2;
                         }
                    }
@@ -212,6 +245,7 @@ public class Liam extends Mover
                    if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                        Vragen.laadVraag(3);
                        BasicWorld.laadLetters = 3;
+                       BasicWorld.liamVragen.play();
                        gevraagt = true;
                    }
                    if ( gevraagt == true && Greenfoot.mouseClicked(this)){
@@ -219,10 +253,12 @@ public class Liam extends Mover
                             gevraagt = false;
                             vragenWereldTweeGedaan = 3;
                             Letter.str.setLength(0);
+                            BasicWorld.liamGoed.play();
                             Vragen.laadVraag(0);
                         }
                         else {
                             Letter.str.setLength(0);
+                            BasicWorld.liamFout.play();
                             BasicWorld.laadLetters = 3;
                         }
                    }
@@ -232,6 +268,7 @@ public class Liam extends Mover
                    if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                        Vragen.laadVraag(4);
                        BasicWorld.laadLetters = 4;
+                       BasicWorld.liamVragen.play();
                        gevraagt = true;
                    }
                    if ( gevraagt == true && Greenfoot.mouseClicked(this)){
@@ -239,10 +276,12 @@ public class Liam extends Mover
                             gevraagt = false;
                             vragenWereldTweeGedaan = 4;
                             Letter.str.setLength(0);
+                            BasicWorld.liamGoed.play();
                             Vragen.laadVraag(0);
                         }
                         else {
                             Letter.str.setLength(0);
+                            BasicWorld.liamFout.play();
                             BasicWorld.laadLetters = 4;
                         }
                    }
@@ -252,6 +291,7 @@ public class Liam extends Mover
                    if (gevraagt == false && Greenfoot.mouseClicked(this)){    
                        Vragen.laadVraag(5);
                        BasicWorld.laadLetters = 5;
+                       BasicWorld.liamVragen.play();
                        gevraagt = true;
                     }
                    if ( gevraagt == true && Greenfoot.mouseClicked(this)){
@@ -259,12 +299,14 @@ public class Liam extends Mover
                             gevraagt = false;
                             vragenWereldTweeGedaan = 0;
                             Letter.str.setLength(0);
+                            BasicWorld.liamGoed.play();
                             Vragen.laadVraag(0);
                             Greenfoot.setWorld(new MyWorld());
                         }
                         else {
                             Letter.str.setLength(0);
                             BasicWorld.laadLetters = 5;
+                            BasicWorld.liamFout.play();
                         }
                     }
                     break;

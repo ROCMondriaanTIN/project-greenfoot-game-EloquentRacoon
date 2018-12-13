@@ -25,6 +25,8 @@ public class Hero extends Mover {
     public int score = 0;
     public boolean torch;
     
+    
+    
     //public static int number;
     
 
@@ -65,15 +67,7 @@ public class Hero extends Mover {
                 break;
             }
         }
-        for (Actor torch : getIntersectingObjects(Torch.class)){
-            if (torch != null){
-                ignoreGround = true;
-                break;
-            }
-            else {
-                ignoreGround = false;
-            }
-        }
+        
         for (Actor climbing : getIntersectingObjects(Climbing.class)) {
             if (climbing != null && Greenfoot.isKeyDown("w")) {
                 velocityY = -5; 
@@ -98,13 +92,13 @@ public class Hero extends Mover {
             else if (Wereld.world == 2){
                 getWorld().showText(Vragen.vragenlijst_2.get(Vragen.vraagNumber).vraag,200, 50);
             }
+            
            }
         if (isAtEdge() && BasicWorld.Level == false){
-            Greenfoot.playSound("hurt.mp3");
+            BasicWorld.hurt.play();
+            BasicWorld.hurt.setVolume(30);
             Greenfoot.setWorld(new MyWorld());
         }
-        
-        
     }
     
     public boolean onGround() {
@@ -152,7 +146,7 @@ public class Hero extends Mover {
             }
            
         }
-
+            
         if (Greenfoot.isKeyDown("a")) {
             velocityX = -6;
             if (velocityY != 0 ) {

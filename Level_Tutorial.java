@@ -18,7 +18,7 @@ public class Level_Tutorial extends BasicWorld
     {
           super();
         this.setBackground("background1.png");
-        //getBackground().scale(1500, 2700);
+        
 
         int [][] map = {
         {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
@@ -49,9 +49,7 @@ public class Level_Tutorial extends BasicWorld
     public void startWorld() {
         super.startWorld();
         Level = false;
-        if (!Level1.isPlaying()){
-            Level1.play();
-        }
+        isPlaying = true;
         for(Actor actor: getObjects(Hero.class)) {
             if(actor != null) {
                 removeObject(actor);
@@ -89,9 +87,14 @@ public class Level_Tutorial extends BasicWorld
     @Override
     public void act() {
         ce.update();
+        if (BasicWorld.Level1.isPlaying() == false){
+            BasicWorld.Level1.play();
+
         }
-    public void yeet(){
-        
-        
-    }
+        if (BasicWorld.Level2.isPlaying() == true){
+            BasicWorld.Level2.stop();
+
+        }
+        }
+    
 }

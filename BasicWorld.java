@@ -15,9 +15,17 @@ public class BasicWorld extends World
     static boolean initialized = false;
     static int laadLetters = 0;
     static boolean Level = false;
-    public boolean isPlaying;
-    public GreenfootSound Level1 = new GreenfootSound("Level1.mp3");
-    public GreenfootSound Level2 = new GreenfootSound("Level2.mp3");
+    static boolean isPlaying;
+    
+    public static GreenfootSound Level1 = new GreenfootSound("Level1.mp3");
+    public static GreenfootSound Level2 = new GreenfootSound("Level2.mp3");
+    public static GreenfootSound hurt = new GreenfootSound("hurt.mp3");
+    public static GreenfootSound item = new GreenfootSound("letter.mp3");
+    public static GreenfootSound liamFout = new GreenfootSound("deny.mp3");
+    public static GreenfootSound liamGoed = new GreenfootSound("accept.mp3");
+    public static GreenfootSound liamVragen = new GreenfootSound("vragen.mp3");
+    
+    
     
     
     /**

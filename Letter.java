@@ -18,14 +18,13 @@ public class Letter extends Mover
         applyVelocity();
         
         if (Greenfoot.mouseClicked(this)){
-            Greenfoot.playSound("letter.mp3");
+            BasicWorld.item.play();
+            
             Schrijven(); 
             
             
             getWorld().removeObject(this);    
-            
-                
-            System.out.println(Letter.str);
+  
         }
         
     }    

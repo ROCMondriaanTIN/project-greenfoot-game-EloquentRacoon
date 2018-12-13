@@ -35,18 +35,13 @@ public class MyWorld extends BasicWorld {
         
     }
     public void act(){
-        if (Greenfoot.isKeyDown("space")){
-            LevelManager.getInstance().setLevel(1);
-            
-        }
-        if (Level2.isPlaying()){
-            Level2.stop();
-        }
-        if (Level1.isPlaying()){
-            Level1.stop();
-        }
+        
+        BasicWorld.Level1.setVolume(50);
+        BasicWorld.Level2.setVolume(50);
         
         
-    }
+        
+        
+    } 
      
 }
